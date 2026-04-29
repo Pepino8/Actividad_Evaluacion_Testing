@@ -1,10 +1,11 @@
-package mx.edu.cetys.software_quality_lab.validators;
+package mx.edu.cetys.software_quality_lab.users;
 
+import mx.edu.cetys.software_quality_lab.users.exceptions.DuplicateUsernameException;
 import org.springframework.stereotype.Service;
 import mx.edu.cetys.software_quality_lab.validators.EmailValidatorService;
 
 @Service
-public class userValidatorService {
+public class UserValidatorService {
 
     /**
      * Registrar un nuevo usuario aplicando todas las reglas de negocio.
@@ -29,11 +30,12 @@ public class userValidatorService {
     private static final String NUMBERS = "0123456789";
 
     private final EmailValidatorService emailValidatorService;
+    private final UserRepository userRepository;
 
-    public userValidatorService(EmailValidatorService emailValidatorService) {
+    public UserValidatorService(EmailValidatorService emailValidatorService, UserRepository userRepository) {
         this.emailValidatorService = emailValidatorService;
+        this.userRepository = userRepository;
     }
-
 
     public boolean isValidUser(String username, String firstName, String lastName, int age, String phone, String email) {
 
@@ -56,6 +58,11 @@ public class userValidatorService {
 
         //check email to isValidEmail
         if(!emailValidator.isValid(email)) return false;
+
+        if(userRepository.existsByUsername(username)){
+            throw new DuplicateUsernameException("Username '" + username + "' is already taken.");
+        }
+
         return true;
     }
 
