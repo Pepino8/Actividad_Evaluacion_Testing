@@ -1,5 +1,9 @@
 package mx.edu.cetys.software_quality_lab.users;
 
+import mx.edu.cetys.software_quality_lab.pets.exceptions.InvalidPetDataException;
+import mx.edu.cetys.software_quality_lab.pets.exceptions.PetNotFoundException;
+import mx.edu.cetys.software_quality_lab.users.exceptions.InvalidUserDataException;
+import mx.edu.cetys.software_quality_lab.users.exceptions.UserNotFoundException;
 import mx.edu.cetys.software_quality_lab.validators.EmailValidatorService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +40,11 @@ public class UserService {
     UserController.UserResponse registerUser(UserController.UserRequest request) {
         log.info("Iniciando registro de usuario, username={}", request.username());
         // TODO: implementar las reglas 1-7, luego guardar en BD y mapear la respuesta
-        throw new UnsupportedOperationException("TODO: implementar registerUser");
+        if(!userValidatorService.isValidUser(request)){
+            throw new InvalidUserDataException("User request not valid");
+        }
+        var savedUser = userRepository.save(new User(request.username(), request.firstName(), request.lastName(), request.phone(), request.email(), request.age()));
+        return mapToResponse(savedUser);
     }
 
     /**
@@ -45,8 +53,17 @@ public class UserService {
      */
     UserController.UserResponse getUserById(Long id) {
         log.info("Buscando usuario por ID, id={}", id);
-        // TODO: buscar por id con findById, lanzar UserNotFoundException si está vacío, mapear y regresar
-        throw new UnsupportedOperationException("TODO: implementar getUserById");
+        log.info("Getting pet by id {}", id);
+        // Validar ssi petId es correcto (numerico, mayor a 0) else fail with 400
+        if(id == null || id <= 0){
+             throw new InvalidUserDataException("Invalid user id");
+        }
+
+        var user = userRepository.findById(id);
+        if(user.isEmpty()){
+            throw new UserNotFoundException("User with id " + id + " not found");
+        }
+        return mapToResponse(user.get());
     }
 
     /**
@@ -57,11 +74,20 @@ public class UserService {
     UserController.UserResponse suspendUser(Long id) {
         log.info("Suspendiendo usuario, id={}", id);
         // TODO: buscar usuario, validar status, cambiar a SUSPENDED, guardar, mapear y regresar
-        throw new UnsupportedOperationException("TODO: implementar suspendUser");
+
+        var user = userRepository.findById(id);
+        if(user.isEmpty()){
+            throw new UserNotFoundException("User with id " + id + " not found");
+        }
+        if(user.get().getStatus() == UserStatus.SUSPENDED){
+            throw new InvalidUserDataException("User with id " + id + " is already suspended");
+        }
+        user.get().setStatus(UserStatus.SUSPENDED);
+        userRepository.save(user.get());
+        return mapToResponse(user.get());
     }
 
     private UserController.UserResponse mapToResponse(User user) {
-        // TODO: mapear los campos de la Entity User al record UserController.UserResponse
-        throw new UnsupportedOperationException("TODO: implementar mapToResponse");
+        return new UserController.UserResponse(user.getId(), user.getUsername(), user.getFirstName(), user.getLastName(), user.getPhone(), user.getEmail(), user.getAge(), user.getStatus().toString());
     }
 }
