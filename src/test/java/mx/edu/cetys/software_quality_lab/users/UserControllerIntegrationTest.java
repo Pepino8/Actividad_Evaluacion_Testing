@@ -187,27 +187,25 @@ public class UserControllerIntegrationTest {
                 .getResponse()
                 .getContentAsString();
 
-        String userId = JsonPath.read(id, "$.id").toString();
+        String userId = JsonPath.read(id, "$.response.user.id").toString();
 
-        mockMvc.perform(get("/users " + userId)).andExpect(status().isOk())
+        mockMvc.perform(get("/users/" + userId)).andExpect(status().isOk())
                 .andExpect(jsonPath("$.info")
-                        .value("Usuario registrado exitosamente"))
+                        .value("User encontrado"))
                 .andExpect(jsonPath("$.response.user.username")
                         .value("juan4_dev"))
                 .andExpect(jsonPath("$.response.user.status")
                         .value("ACTIVE"))
-                .andExpect(jsonPath("$.response.firstName")
+                .andExpect(jsonPath("$.response.user.firstName")
                         .value("Juan"))
-                .andExpect(jsonPath("$.response.lastName")
+                .andExpect(jsonPath("$.response.user.lastName")
                         .value("Pérez"))
-                .andExpect(jsonPath("$.response.phone")
+                .andExpect(jsonPath("$.response.user.phone")
                         .value("6641234567"))
-                .andExpect(jsonPath("$.response.email")
-                        .value("Pérez"))
-                .andExpect(jsonPath("$.response.firstName")
-                        .value("juan4#gmail.com"))
-                .andExpect(jsonPath("$.response.age")
-                        .value("25"));;
+                .andExpect(jsonPath("$.response.user.email")
+                        .value("jan4#gmil.com"))
+                .andExpect(jsonPath("$.response.user.age")
+                        .value(25));
 
         // TODO: guardar un usuario via repository, obtener su id generado
         // TODO: realizar GET /users/{id}
@@ -245,9 +243,9 @@ public class UserControllerIntegrationTest {
                 .getResponse()
                 .getContentAsString();
 
-        String userId = JsonPath.read(id, "$.user.id").toString();
+        String userId = JsonPath.read(id, "$.response.user.id").toString();
 
-        mockMvc.perform(patch("/user " + userId + "/suspend")).andExpect(status().isOk())
+        mockMvc.perform(patch("/users/" + userId + "/suspend")).andExpect(status().isOk())
                 .andExpect(jsonPath("$.response.user.status").value("SUSPENDED"));
         // TODO: guardar un usuario ACTIVE via repository
         // TODO: realizar PATCH /users/{id}/suspend
@@ -277,10 +275,10 @@ public class UserControllerIntegrationTest {
                 .getResponse()
                 .getContentAsString();
 
-        String userId = JsonPath.read(id, "$.id").toString();
-        mockMvc.perform(patch("/user " + userId + "/suspend")).andExpect(status().isOk());
+        String userId = JsonPath.read(id, "$.response.user.id").toString();
+        mockMvc.perform(patch("/users/" + userId + "/suspend")).andExpect(status().isOk());
 
-        mockMvc.perform(patch("/user " + userId + "/suspend")).andExpect(status().isBadRequest());
+        mockMvc.perform(patch("/users/" + userId + "/suspend")).andExpect(status().isBadRequest());
         // TODO: guardar un usuario con status SUSPENDED via repository
         // TODO: realizar PATCH /users/{id}/suspend
         // TODO: andExpect status 400

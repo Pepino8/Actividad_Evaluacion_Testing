@@ -30,10 +30,10 @@
 
 ### Cobertura obtenida
 
-| Métrica | Resultado |
-|---|---|
-| Line coverage | <!-- ej. 91% --> |
-| Branch coverage | <!-- ej. 87% --> |
+| Métrica | Resultado            |
+|---|----------------------|
+| Line coverage | 89% <!-- ej. 91% --> |
+| Branch coverage | 83% <!-- ej. 87% --> |
 
 ---
 
