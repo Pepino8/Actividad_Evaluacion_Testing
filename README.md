@@ -2,7 +2,7 @@
 
 ## Equipo
 
-**Nombre del equipo:** <!-- Nombre de su equipo --> Equipo Dortmund
+**Nombre del equipo:** <!-- Nombre de su equipo --> Equipo Alemania es clave (el DortMund no)
 
 | Nombre completo              | Matrícula |
 |------------------------------|-----------|
