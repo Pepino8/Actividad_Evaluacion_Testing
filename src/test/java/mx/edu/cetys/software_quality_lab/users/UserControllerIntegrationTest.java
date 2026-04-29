@@ -1,5 +1,6 @@
 package mx.edu.cetys.software_quality_lab.users;
 
+import com.jayway.jsonpath.JsonPath;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +39,7 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "6641234567",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 25
                 }""";
 
@@ -67,7 +68,7 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "6641234567",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 25
                 }""";
         mockMvc.perform(post("/users")
@@ -88,7 +89,7 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "6641234567",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 12
                 }""";
         mockMvc.perform(post("/users")
@@ -108,7 +109,7 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "123",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 25
                 }""";
         mockMvc.perform(post("/users")
@@ -148,7 +149,7 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "6641234567",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 25
                 }""";
 
@@ -172,18 +173,23 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "6641234567",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 25
                 }""";
 
         // TODO: realizar POST /users con el body anterior
-        mockMvc.perform(post("/users")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(body)
-        );
 
-        mockMvc.perform(get("/users")
-                        .param("id", "1")).andExpect(status().isOk())
+        String id = mockMvc.perform(post("/users")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(body)
+                )
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+
+        String userId = JsonPath.read(id, "$.id").toString();
+
+        mockMvc.perform(get("/users " + userId)).andExpect(status().isOk())
                 .andExpect(jsonPath("$.info")
                         .value("Usuario registrado exitosamente"))
                 .andExpect(jsonPath("$.response.user.username")
@@ -226,17 +232,22 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "6641234567",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 25
                 }""";
 
         // TODO: realizar POST /users con el body anterior
-        mockMvc.perform(post("/users")
+        String id = mockMvc.perform(post("/users")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(body)
-                );
+                )
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
 
-        mockMvc.perform(patch("/user " + 1 + "/suspend")).andExpect(status().isOk())
+        String userId = JsonPath.read(id, "$.user.id").toString();
+
+        mockMvc.perform(patch("/user " + userId + "/suspend")).andExpect(status().isOk())
                 .andExpect(jsonPath("$.response.user.status").value("SUSPENDED"));
         // TODO: guardar un usuario ACTIVE via repository
         // TODO: realizar PATCH /users/{id}/suspend
@@ -252,19 +263,24 @@ public class UserControllerIntegrationTest {
                     "firstName": "Juan",
                     "lastName": "Pérez",
                     "phone": "6641234567",
-                    "email": "juan4#gmail.com",
+                    "email": "jan4#gmil.com",
                     "age": 25
                 }""";
 
         // TODO: realizar POST /users con el body anterior
-        mockMvc.perform(post("/users")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(body)
-        );
 
-        mockMvc.perform(patch("/user " + 1 + "/suspend")).andExpect(status().isOk());
+        String id = mockMvc.perform(post("/users")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(body)
+                )
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
 
-        mockMvc.perform(patch("/user " + 1 + "/suspend")).andExpect(status().isBadRequest());
+        String userId = JsonPath.read(id, "$.id").toString();
+        mockMvc.perform(patch("/user " + userId + "/suspend")).andExpect(status().isOk());
+
+        mockMvc.perform(patch("/user " + userId + "/suspend")).andExpect(status().isBadRequest());
         // TODO: guardar un usuario con status SUSPENDED via repository
         // TODO: realizar PATCH /users/{id}/suspend
         // TODO: andExpect status 400

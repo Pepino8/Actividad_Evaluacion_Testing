@@ -7,26 +7,9 @@ import mx.edu.cetys.software_quality_lab.validators.EmailValidatorService;
 @Service
 public class UserValidatorService {
 
-    /**
-     * Registrar un nuevo usuario aplicando todas las reglas de negocio.
-     *
-     * Reglas a implementar (lanzar InvalidUserDataException a menos que se indique):
-     *  1. Username  — entre 5 y 20 caracteres, solo letras minúsculas, dígitos y guion bajo (_),
-     *                 NO debe comenzar ni terminar con guion bajo X
-     *  2. First name — entre 2 y 50 caracteres, solo letras (se permiten acentos: á, é, ñ, etc.) X
-     *  3. Last name  — entre 2 y 50 caracteres, solo letras (se permiten acentos) X
-     *  4. Age        — debe ser mayor a 12 y menor o igual a 120 X
-     *  5. Phone      — exactamente 10 dígitos, sin letras ni símbolos
-     *  6. Email      — delegar a emailValidatorService.isValid(email);
-     *                  lanzar InvalidUserDataException si regresa false
-     *  7. Unicidad del username — si userRepository.existsByUsername regresa true,
-     *                             lanzar DuplicateUsernameException
-     */
-
     public static final Character UNDERSCORE = '_';
-    private static final String VALID_ACENTOS = "áéíóúñ";
-    private static final String VALID_LETTERS = "abcdefghijklmnopqrstuvwxyz";
-    private static final String VOWELS = "aeiou";
+    private static final String VALID_ACENTOS = "áéíóúñÁÉÍÓÚÑ";
+    private static final String VALID_LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String NUMBERS = "0123456789";
 
     private static UserRepository userRepository = null;
@@ -39,32 +22,31 @@ public class UserValidatorService {
 
         EmailValidatorService emailValidator = new EmailValidatorService();
 
-        //check username
-        if(!validUsername(username)) {System.out.println("Invalid username");
-            return false;}
+        if (!validUsername(username)) {
+            System.out.println("Invalid username");
+            return false;
+        }
 
-        //check first name
-        if(!isValidFirstName(firstName)) {
+        if (!isValidName(firstName)) {
             System.out.println("Invalid first name");
-            return false;}
+            return false;
+        }
 
-        //check last name
-        if(!isValidFirstName(lastName)) {
+        if (!isValidName(lastName)) {
             System.out.println("Invalid last name");
-            return false;}
+            return false;
+        }
 
-        //check age
-        if(age <= 12 || age >= 120) return false;
+        if (age <= 12 || age > 120) return false;
 
-        //check phone number
-        if(!isValidNumber(phone)) return false;
+        if (!isValidPhone(phone)) return false;
 
-        //check email to isValidEmail
-        if(!emailValidator.isValid(email)) {
+        if (!emailValidator.isValid(email)) {
             System.out.println("Invalid email");
-            return false;}
+            return false;
+        }
 
-        if(userRepository.existsByUsername(username)){
+        if (userRepository.existsByUsername(username)) {
             throw new DuplicateUsernameException("Username '" + username + "' is already taken.");
         }
 
@@ -72,52 +54,51 @@ public class UserValidatorService {
     }
 
     private static boolean validUsername(String username) {
-        if(username == null) return false;
-        if(username.length() > 20 || username.length() < 5) return false;
-        if(username.charAt(0) == UNDERSCORE || username.charAt(username.length() - 1) == UNDERSCORE) return false;
-        for(int i = 0; i < username.length(); i++) {
-            if(!isVowel(username.charAt(i)) || !isDigit(username.charAt(i)) || username.charAt(i) != UNDERSCORE) return false;
+        if (username == null) return false;
+        if (username.length() < 5 || username.length() > 20) return false;
+        if (username.charAt(0) == UNDERSCORE || username.charAt(username.length() - 1) == UNDERSCORE) return false;
+
+        for (int i = 0; i < username.length(); i++) {
+            char c = username.charAt(i);
+            if (!isLowerCaseLetter(c) && !isDigitChar(c) && c != UNDERSCORE) return false;
         }
 
         return true;
     }
 
-    private static boolean isValidFirstName(String firstName) {
-        if(firstName == null) return false;
-        if(firstName.length() < 2 || firstName.length() > 50) return false;
+    private static boolean isValidName(String name) {
+        if (name == null) return false;
+        if (name.length() < 2 || name.length() > 50) return false;
 
-        for(int i = 0; i < firstName.length(); i++) {
-            if(!isValidLetter(firstName.charAt(i)) || !isValidAcentos(firstName.charAt(i))) return false;
+        for (int i = 0; i < name.length(); i++) {
+            char c = name.charAt(i);
+            if (!isValidLetter(c) && !isValidAcento(c)) return false;
         }
         return true;
     }
 
-    private static boolean isValidNumber(String phone){
-        if(phone == null) return false;
-        if(phone.length() != 10) return false;
-        for(int i = 0; i < phone.length(); i++) {
-            if(!isValidNumber(phone.charAt(i))) return false;
+    private static boolean isValidPhone(String phone) {
+        if (phone == null) return false;
+        if (phone.length() != 10) return false;
+        for (int i = 0; i < phone.length(); i++) {
+            if (!isDigitChar(phone.charAt(i))) return false;
         }
         return true;
     }
 
-    private static boolean isVowel(char c) {
-        return VOWELS.indexOf(c) >= 0;
-    }
-
-    private static boolean isDigit(char c) {
-        return Character.isDigit(c);
+    private static boolean isLowerCaseLetter(char c) {
+        return c >= 'a' && c <= 'z';
     }
 
     private static boolean isValidLetter(char c) {
         return VALID_LETTERS.indexOf(c) >= 0;
     }
 
-    private static boolean isValidAcentos(char c) {
+    private static boolean isValidAcento(char c) {
         return VALID_ACENTOS.indexOf(c) >= 0;
     }
 
-    private static boolean isValidNumber(char c) {
-        return NUMBERS.indexOf(c) >= 0;
+    private static boolean isDigitChar(char c) {
+        return Character.isDigit(c);
     }
 }
