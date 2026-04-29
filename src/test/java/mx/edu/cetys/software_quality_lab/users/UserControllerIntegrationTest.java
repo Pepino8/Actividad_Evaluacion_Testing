@@ -43,6 +43,16 @@ public class UserControllerIntegrationTest {
                 }""";
 
         // TODO: realizar POST /users con el body anterior
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        ).andExpect(status().isCreated())
+                .andExpect(jsonPath("$.info")
+                        .value("Usuario registrado exitosamente"))
+                .andExpect(jsonPath("$.response.user.username")
+                        .value("juan4_dev"))
+                .andExpect(jsonPath("$.response.user.status")
+                    .value("ACTIVE"));
         // TODO: andExpect status 201
         // TODO: andExpect jsonPath("$.info") contiene "creado" o similar
         // TODO: andExpect jsonPath("$.response.user.username") == "juan4_dev"
@@ -51,6 +61,20 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn400WhenUsernameIsTooShort() throws Exception {
+        String body = """
+                {
+                    "username": "abcd",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "6641234567",
+                    "email": "juan4#gmail.com",
+                    "age": 25
+                }""";
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        ).andExpect(status().isBadRequest());
+
         // TODO: body con username de 4 caracteres
         // TODO: realizar POST /users
         // TODO: andExpect status 400
@@ -58,6 +82,19 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn400WhenAgeIsExactlyTwelve() throws Exception {
+        String body = """
+                {
+                    "username": "abcd",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "6641234567",
+                    "email": "juan4#gmail.com",
+                    "age": 12
+                }""";
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        ).andExpect(status().isBadRequest());
         // TODO: body con age = 12 (caso límite — debe ser mayor a 12)
         // TODO: realizar POST /users
         // TODO: andExpect status 400
@@ -65,6 +102,19 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn400WhenPhoneIsInvalid() throws Exception {
+        String body = """
+                {
+                    "username": "abcd",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "123",
+                    "email": "juan4#gmail.com",
+                    "age": 25
+                }""";
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        ).andExpect(status().isBadRequest());
         // TODO: body con phone = "123" (menos de 10 dígitos)
         // TODO: realizar POST /users
         // TODO: andExpect status 400
@@ -72,6 +122,19 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn400WhenEmailIsInvalid() throws Exception {
+        String body = """
+                {
+                    "username": "abcd",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "6641234567",
+                    "email": "juan4@gmail.com",
+                    "age": 25
+                }""";
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        ).andExpect(status().isBadRequest());
         // TODO: body con email en formato estándar "user@gmail.com" (no cumple las reglas del validador)
         // TODO: realizar POST /users
         // TODO: andExpect status 400
@@ -79,6 +142,20 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn409WhenUsernameIsDuplicated() throws Exception {
+        String body = """
+                {
+                    "username": "juan4_dev",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "6641234567",
+                    "email": "juan4#gmail.com",
+                    "age": 25
+                }""";
+
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        ).andExpect(status().isCreated());
         // TODO: guardar un usuario directamente via repository con el mismo username
         // TODO: realizar segundo POST /users con el mismo username
         // TODO: andExpect status 409
@@ -88,6 +165,44 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn200AndUserWhenFound() throws Exception {
+
+        String body = """
+                {
+                    "username": "juan4_dev",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "6641234567",
+                    "email": "juan4#gmail.com",
+                    "age": 25
+                }""";
+
+        // TODO: realizar POST /users con el body anterior
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        );
+
+        mockMvc.perform(get("/users")
+                        .param("id", "1")).andExpect(status().isOk())
+                .andExpect(jsonPath("$.info")
+                        .value("Usuario registrado exitosamente"))
+                .andExpect(jsonPath("$.response.user.username")
+                        .value("juan4_dev"))
+                .andExpect(jsonPath("$.response.user.status")
+                        .value("ACTIVE"))
+                .andExpect(jsonPath("$.response.firstName")
+                        .value("Juan"))
+                .andExpect(jsonPath("$.response.lastName")
+                        .value("Pérez"))
+                .andExpect(jsonPath("$.response.phone")
+                        .value("6641234567"))
+                .andExpect(jsonPath("$.response.email")
+                        .value("Pérez"))
+                .andExpect(jsonPath("$.response.firstName")
+                        .value("juan4#gmail.com"))
+                .andExpect(jsonPath("$.response.age")
+                        .value("25"));;
+
         // TODO: guardar un usuario via repository, obtener su id generado
         // TODO: realizar GET /users/{id}
         // TODO: andExpect status 200
@@ -96,6 +211,7 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn404WhenUserNotFound() throws Exception {
+        mockMvc.perform(get("/users" + 9999)).andExpect(status().isNotFound());
         // TODO: realizar GET /users/9999 (id inexistente)
         // TODO: andExpect status 404
     }
@@ -104,6 +220,24 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldSuspendUserAndReturn200() throws Exception {
+        String body = """
+                {
+                    "username": "juan4_dev",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "6641234567",
+                    "email": "juan4#gmail.com",
+                    "age": 25
+                }""";
+
+        // TODO: realizar POST /users con el body anterior
+        mockMvc.perform(post("/users")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(body)
+                );
+
+        mockMvc.perform(patch("/user " + 1 + "/suspend")).andExpect(status().isOk())
+                .andExpect(jsonPath("$.response.user.status").value("SUSPENDED"));
         // TODO: guardar un usuario ACTIVE via repository
         // TODO: realizar PATCH /users/{id}/suspend
         // TODO: andExpect status 200
@@ -112,6 +246,25 @@ public class UserControllerIntegrationTest {
 
     @Test
     void shouldReturn400WhenSuspendingAlreadySuspendedUser() throws Exception {
+        String body = """
+                {
+                    "username": "juan4_dev",
+                    "firstName": "Juan",
+                    "lastName": "Pérez",
+                    "phone": "6641234567",
+                    "email": "juan4#gmail.com",
+                    "age": 25
+                }""";
+
+        // TODO: realizar POST /users con el body anterior
+        mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body)
+        );
+
+        mockMvc.perform(patch("/user " + 1 + "/suspend")).andExpect(status().isOk());
+
+        mockMvc.perform(patch("/user " + 1 + "/suspend")).andExpect(status().isBadRequest());
         // TODO: guardar un usuario con status SUSPENDED via repository
         // TODO: realizar PATCH /users/{id}/suspend
         // TODO: andExpect status 400
