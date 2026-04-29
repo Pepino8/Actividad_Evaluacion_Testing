@@ -73,11 +73,9 @@ public class UserValidatorService {
 
     private static boolean validUsername(String username) {
         if(username == null) return false;
+        if(username.length() > 20 || username.length() < 5) return false;
+        if(username.charAt(0) == UNDERSCORE || username.charAt(username.length() - 1) == UNDERSCORE) return false;
         for(int i = 0; i < username.length(); i++) {
-            if(username.length() > 20 || username.length() < 5) return false;
-
-            if(username.charAt(0) == UNDERSCORE || username.charAt(username.length() - 1) == UNDERSCORE) return false;
-
             if(!isVowel(username.charAt(i)) || !isDigit(username.charAt(i)) || username.charAt(i) != UNDERSCORE) return false;
         }
 
