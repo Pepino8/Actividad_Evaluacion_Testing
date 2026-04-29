@@ -2,23 +2,23 @@
 
 ## Equipo
 
-**Nombre del equipo:** <!-- Nombre de su equipo -->
+**Nombre del equipo:** <!-- Nombre de su equipo --> Equipo Dortmund
 
-| Nombre completo | Matrícula |
-|---|---|
-| Estudiante 1 | 000000 |
-| Estudiante 2 | 000000 |
-| Estudiante 3 | 000000 |
+| Nombre completo              | Matrícula |
+|------------------------------|-----------|
+| Juan Manuel Sandoval Ramirez | e012602   |
+| Cristobal Coronado Romo      | e013318   |
+| Ramiro Cruz Labrada          | e013744   |
 
 ---
 
 ## Entrega
 
-**Fecha:** <!-- Fecha de entrega -->
+**Fecha:** <!-- Fecha de entrega --> 28 Abril del 2026
 
-**Modalidad:** <!-- ZIP / GitHub -->
+**Modalidad:** <!-- ZIP / GitHub --> GitHub
 
-**Link del repositorio (si aplica):** <!-- https://github.com/... -->
+**Link del repositorio (si aplica):** <!-- https://github.com/... --> https://github.com/Pepino8/Actividad_Evaluacion_Testing.git
 
 ---
 

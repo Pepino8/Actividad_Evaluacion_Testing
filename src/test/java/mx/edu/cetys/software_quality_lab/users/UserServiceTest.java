@@ -77,7 +77,7 @@ public class UserServiceTest {
         // TODO: arrange — mockear findById con un usuario ACTIVE
         // TODO: act — llamar a userService.suspendUser(id)
         // TODO: assert — verificar que el status regresado sea "SUSPENDED"; confirmar que save fue llamado
-        var mockUser = buildMockSavedUser(1L, "juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 25);
+        var mockUser = buildMockSavedUser(1L, "juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 25);
         when(userRepository.findById(1L)).thenReturn(java.util.Optional.of(mockUser));
         when(userRepository.save(any())).thenReturn(mockUser);
         var response = userService.suspendUser(1L);
@@ -91,7 +91,7 @@ public class UserServiceTest {
     void shouldThrowWhenUsernameTooShort() {
         // TODO: construir request con username de 4 caracteres
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("juan", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -99,7 +99,7 @@ public class UserServiceTest {
     void shouldThrowWhenUsernameTooLong() {
         // TODO: construir request con username de 21 caracteres
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juanusernameme_gaultralargo", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("juanusernameme_gaultralargo", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -107,7 +107,7 @@ public class UserServiceTest {
     void shouldThrowWhenUsernameHasInvalidChars() {
         // TODO: username con mayúsculas o caracteres especiales, ej. "User@Name"
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("User@Name", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("User@Name", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -115,7 +115,7 @@ public class UserServiceTest {
     void shouldThrowWhenUsernameStartsWithUnderscore() {
         // TODO: username "_nombrevalido"
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("_nombrevalido", "Juan", "Manuel", "6623792671",  "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("_nombrevalido", "Juan", "Manuel", "6623792671",  "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -123,7 +123,7 @@ public class UserServiceTest {
     void shouldThrowWhenUsernameEndsWithUnderscore() {
         // TODO: username "nombrevalido_"
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("nombrevalido_", "Juan", "Manuel", "6623792671",  "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("nombrevalido_", "Juan", "Manuel", "6623792671",  "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -133,7 +133,7 @@ public class UserServiceTest {
     void shouldThrowWhenFirstNameTooShort() {
         // TODO: firstName de 1 carácter
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("nombrevalido", "J", "Manuel", "6623792671",  "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("nombrevalido", "J", "Manuel", "6623792671",  "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -141,7 +141,7 @@ public class UserServiceTest {
     void shouldThrowWhenFirstNameContainsNumbers() {
         // TODO: firstName como "Juan5"
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("nombrevalido", "Juan5", "Manuel", "6623792671",  "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("nombrevalido", "Juan5", "Manuel", "6623792671",  "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -149,7 +149,7 @@ public class UserServiceTest {
     void shouldThrowWhenLastNameTooShort() {
         // TODO: lastName de 1 carácter
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan_pro", "Juan", "M", "6623792671",  "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("juan_pro", "Juan", "M", "6623792671",  "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -157,7 +157,7 @@ public class UserServiceTest {
     void shouldThrowWhenLastNameContainsNumbers() {
         // TODO: lastName como "Perez2"
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan_pro", "Juan", "Perez2", "6623792671", "j4an#gmail.com", 25);
+        var request = new UserController.UserRequest("juan_pro", "Juan", "Perez2", "6623792671", "j4an#gmal.com", 25);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -167,7 +167,7 @@ public class UserServiceTest {
     void shouldThrowWhenAgeIsExactlyTwelve() {
         // TODO: age = 12 — caso límite (boundary): debe ser MAYOR a 12, no mayor o igual
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 12);
+        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 12);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -175,7 +175,7 @@ public class UserServiceTest {
     void shouldThrowWhenAgeIsBelowTwelve() {
         // TODO: age = 5
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 5);
+        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 5);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -183,7 +183,7 @@ public class UserServiceTest {
     void shouldThrowWhenAgeExceedsMaximum() {
         // TODO: age = 121 — excede el máximo permitido de 120
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 121);
+        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 121);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -193,7 +193,7 @@ public class UserServiceTest {
     void shouldThrowWhenPhoneHasWrongLength() {
         // TODO: phone con 9 u 11 dígitos
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "662379267", "j4an#gmail.com", 12);
+        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "662379267", "j4an#gmal.com", 12);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -201,7 +201,7 @@ public class UserServiceTest {
     void shouldThrowWhenPhoneContainsLetters() {
         // TODO: phone como "123456789a"
         // TODO: assertThrows InvalidUserDataException
-        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "123456789a", "j4an#gmail.com", 12);
+        var request = new UserController.UserRequest("juan_pro", "Juan", "Manuel", "123456789a", "j4an#gmal.com", 12);
         assertThrows(InvalidUserDataException.class, () -> userService.registerUser(request));
     }
 
@@ -247,7 +247,7 @@ public class UserServiceTest {
     void shouldThrowWhenSuspendingAlreadySuspendedUser() {
         // TODO: mockear findById con un usuario SUSPENDED
         // TODO: assertThrows InvalidUserDataException
-        var user = new User("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmail.com", 25);
+        var user = new User("juan_pro", "Juan", "Manuel", "6623792671", "j4an#gmal.com", 25);
         user.setStatus(UserStatus.SUSPENDED);
         when(userRepository.findById(any())).thenReturn(java.util.Optional.of(user));
         assertThrows(InvalidUserDataException.class, () -> userService.suspendUser(1L));
