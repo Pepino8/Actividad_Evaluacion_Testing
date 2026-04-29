@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import mx.edu.cetys.software_quality_lab.users.UserValidatorService;
+
 @Service
 public class UserService {
 
@@ -40,7 +42,7 @@ public class UserService {
     UserController.UserResponse registerUser(UserController.UserRequest request) {
         log.info("Iniciando registro de usuario, username={}", request.username());
         // TODO: implementar las reglas 1-7, luego guardar en BD y mapear la respuesta
-        if(!userValidatorService.isValidUser(request)){
+        if(UserValidatorService.isValidUser(request.username(), request.firstName(), request.lastName(), request.age(), request.phone(), request.email())){
             throw new InvalidUserDataException("User request not valid");
         }
         var savedUser = userRepository.save(new User(request.username(), request.firstName(), request.lastName(), request.phone(), request.email(), request.age()));

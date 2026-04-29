@@ -29,26 +29,29 @@ public class UserValidatorService {
     private static final String VOWELS = "aeiou";
     private static final String NUMBERS = "0123456789";
 
-    private final EmailValidatorService emailValidatorService;
-    private final UserRepository userRepository;
+    private static UserRepository userRepository = null;
 
     public UserValidatorService(EmailValidatorService emailValidatorService, UserRepository userRepository) {
-        this.emailValidatorService = emailValidatorService;
-        this.userRepository = userRepository;
+        UserValidatorService.userRepository = userRepository;
     }
 
-    public boolean isValidUser(String username, String firstName, String lastName, int age, String phone, String email) {
+    public static boolean isValidUser(String username, String firstName, String lastName, int age, String phone, String email) {
 
         EmailValidatorService emailValidator = new EmailValidatorService();
 
         //check username
-        if(!validUsername(username)) return false;
+        if(!validUsername(username)) {System.out.println("Invalid username");
+            return false;}
 
         //check first name
-        if(!isValidFirstName(firstName)) return false;
+        if(!isValidFirstName(firstName)) {
+            System.out.println("Invalid first name");
+            return false;}
 
         //check last name
-        if(!isValidFirstName(lastName)) return false;
+        if(!isValidFirstName(lastName)) {
+            System.out.println("Invalid last name");
+            return false;}
 
         //check age
         if(age <= 12 || age >= 120) return false;
@@ -57,7 +60,9 @@ public class UserValidatorService {
         if(!isValidNumber(phone)) return false;
 
         //check email to isValidEmail
-        if(!emailValidator.isValid(email)) return false;
+        if(!emailValidator.isValid(email)) {
+            System.out.println("Invalid email");
+            return false;}
 
         if(userRepository.existsByUsername(username)){
             throw new DuplicateUsernameException("Username '" + username + "' is already taken.");
@@ -66,7 +71,7 @@ public class UserValidatorService {
         return true;
     }
 
-    private boolean validUsername(String username) {
+    private static boolean validUsername(String username) {
         if(username == null) return false;
         for(int i = 0; i < username.length(); i++) {
             if(username.length() > 20 || username.length() < 5) return false;
@@ -79,7 +84,7 @@ public class UserValidatorService {
         return true;
     }
 
-    private boolean isValidFirstName(String firstName) {
+    private static boolean isValidFirstName(String firstName) {
         if(firstName == null) return false;
         if(firstName.length() < 2 || firstName.length() > 50) return false;
 
@@ -89,7 +94,7 @@ public class UserValidatorService {
         return true;
     }
 
-    private boolean isValidNumber(String phone){
+    private static boolean isValidNumber(String phone){
         if(phone == null) return false;
         if(phone.length() != 10) return false;
         for(int i = 0; i < phone.length(); i++) {
@@ -98,23 +103,23 @@ public class UserValidatorService {
         return true;
     }
 
-    private boolean isVowel(char c) {
+    private static boolean isVowel(char c) {
         return VOWELS.indexOf(c) >= 0;
     }
 
-    private boolean isDigit(char c) {
+    private static boolean isDigit(char c) {
         return Character.isDigit(c);
     }
 
-    private boolean isValidLetter(char c) {
+    private static boolean isValidLetter(char c) {
         return VALID_LETTERS.indexOf(c) >= 0;
     }
 
-    private boolean isValidAcentos(char c) {
+    private static boolean isValidAcentos(char c) {
         return VALID_ACENTOS.indexOf(c) >= 0;
     }
 
-    private boolean isValidNumber(char c) {
+    private static boolean isValidNumber(char c) {
         return NUMBERS.indexOf(c) >= 0;
     }
 }
