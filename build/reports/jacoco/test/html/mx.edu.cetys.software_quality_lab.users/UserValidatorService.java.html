@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserValidatorService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">software-quality-lab</a> &gt; <a href="index.source.html" class="el_package">mx.edu.cetys.software_quality_lab.users</a> &gt; <span class="el_source">UserValidatorService.java</span></div><h1>UserValidatorService.java</h1><pre class="source lang-java linenums">package mx.edu.cetys.software_quality_lab.users;
+
+import mx.edu.cetys.software_quality_lab.users.exceptions.DuplicateUsernameException;
+import org.springframework.stereotype.Service;
+import mx.edu.cetys.software_quality_lab.validators.EmailValidatorService;
+
+@Service
+public class UserValidatorService {
+
+<span class="fc" id="L10">    public static final Character UNDERSCORE = '_';</span>
+    private static final String VALID_ACENTOS = &quot;áéíóúñÁÉÍÓÚÑ&quot;;
+    private static final String VALID_LETTERS = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+    private static final String NUMBERS = &quot;0123456789&quot;;
+
+<span class="fc" id="L15">    private static UserRepository userRepository = null;</span>
+
+<span class="fc" id="L17">    public UserValidatorService(EmailValidatorService emailValidatorService, UserRepository userRepository) {</span>
+<span class="fc" id="L18">        UserValidatorService.userRepository = userRepository;</span>
+<span class="fc" id="L19">    }</span>
+
+    public static boolean isValidUser(String username, String firstName, String lastName, int age, String phone, String email) {
+
+<span class="fc" id="L23">        EmailValidatorService emailValidator = new EmailValidatorService();</span>
+
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if (!validUsername(username)) {</span>
+<span class="fc" id="L26">            System.out.println(&quot;Invalid username&quot;);</span>
+<span class="fc" id="L27">            return false;</span>
+        }
+
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (!isValidName(firstName)) {</span>
+<span class="fc" id="L31">            System.out.println(&quot;Invalid first name&quot;);</span>
+<span class="fc" id="L32">            return false;</span>
+        }
+
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (!isValidName(lastName)) {</span>
+<span class="fc" id="L36">            System.out.println(&quot;Invalid last name&quot;);</span>
+<span class="fc" id="L37">            return false;</span>
+        }
+
+<span class="fc bfc" id="L40" title="All 4 branches covered.">        if (age &lt;= 12 || age &gt; 120) return false;</span>
+
+<span class="pc bpc" id="L42" title="1 of 2 branches missed.">        if (!isValidPhone(phone)) return false;</span>
+
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        if (!emailValidator.isValid(email)) {</span>
+<span class="nc" id="L45">            System.out.println(&quot;Invalid email&quot;);</span>
+<span class="nc" id="L46">            return false;</span>
+        }
+
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        if (userRepository.existsByUsername(username)) {</span>
+<span class="nc" id="L50">            throw new DuplicateUsernameException(&quot;Username '&quot; + username + &quot;' is already taken.&quot;);</span>
+        }
+
+<span class="fc" id="L53">        return true;</span>
+    }
+
+    private static boolean validUsername(String username) {
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">        if (username == null) return false;</span>
+<span class="fc bfc" id="L58" title="All 4 branches covered.">        if (username.length() &lt; 5 || username.length() &gt; 20) return false;</span>
+<span class="fc bfc" id="L59" title="All 4 branches covered.">        if (username.charAt(0) == UNDERSCORE || username.charAt(username.length() - 1) == UNDERSCORE) return false;</span>
+
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        for (int i = 0; i &lt; username.length(); i++) {</span>
+<span class="fc" id="L62">            char c = username.charAt(i);</span>
+<span class="fc bfc" id="L63" title="All 6 branches covered.">            if (!isLowerCaseLetter(c) &amp;&amp; !isDigitChar(c) &amp;&amp; c != UNDERSCORE) return false;</span>
+        }
+
+<span class="fc" id="L66">        return true;</span>
+    }
+
+    private static boolean isValidName(String name) {
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        if (name == null) return false;</span>
+<span class="pc bpc" id="L71" title="1 of 4 branches missed.">        if (name.length() &lt; 2 || name.length() &gt; 50) return false;</span>
+
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        for (int i = 0; i &lt; name.length(); i++) {</span>
+<span class="fc" id="L74">            char c = name.charAt(i);</span>
+<span class="fc bfc" id="L75" title="All 4 branches covered.">            if (!isValidLetter(c) &amp;&amp; !isValidAcento(c)) return false;</span>
+        }
+<span class="fc" id="L77">        return true;</span>
+    }
+
+    private static boolean isValidPhone(String phone) {
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">        if (phone == null) return false;</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (phone.length() != 10) return false;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        for (int i = 0; i &lt; phone.length(); i++) {</span>
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">            if (!isDigitChar(phone.charAt(i))) return false;</span>
+        }
+<span class="fc" id="L86">        return true;</span>
+    }
+
+    private static boolean isLowerCaseLetter(char c) {
+<span class="pc bpc" id="L90" title="1 of 4 branches missed.">        return c &gt;= 'a' &amp;&amp; c &lt;= 'z';</span>
+    }
+
+    private static boolean isValidLetter(char c) {
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        return VALID_LETTERS.indexOf(c) &gt;= 0;</span>
+    }
+
+    private static boolean isValidAcento(char c) {
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        return VALID_ACENTOS.indexOf(c) &gt;= 0;</span>
+    }
+
+    private static boolean isDigitChar(char c) {
+<span class="fc" id="L102">        return Character.isDigit(c);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

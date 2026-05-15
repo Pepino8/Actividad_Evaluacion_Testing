@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:44.429Z" hostname="PEPINO" time="0.665">
+  <properties/>
+  <testcase name="getPetById_idNegativo_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.528"/>
+  <testcase name="savePet_edadNegativa_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.004"/>
+  <testcase name="savePet_razaSoloEspacios_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.004"/>
+  <testcase name="getPetById_exitoso()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.034"/>
+  <testcase name="savePet_colorNulo_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.004"/>
+  <testcase name="savePet_nombreVacio_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.004"/>
+  <testcase name="savePet_colorVacio_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.003"/>
+  <testcase name="savePet_nombreSoloEspacios_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.003"/>
+  <testcase name="savePet_colorSoloEspacios_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.003"/>
+  <testcase name="savePet_edadCero_exitoso()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.006"/>
+  <testcase name="getPetById_idCero_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.003"/>
+  <testcase name="getPetById_noEncontrado_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.006"/>
+  <testcase name="getPetById_idNulo_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.005"/>
+  <testcase name="savePet_nombreMenosDeDosCaracteres_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.005"/>
+  <testcase name="savePet_edadNula_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.004"/>
+  <testcase name="savePet_nombreNulo_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.005"/>
+  <testcase name="savePet_exitoso()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.006"/>
+  <testcase name="getAllPets_conPets_regriesaLista()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.004"/>
+  <testcase name="savePet_razaVacia_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.004"/>
+  <testcase name="getAllPets_sinPets_regriesaListaVacia()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.007"/>
+  <testcase name="savePet_razaNula_excepcionEsperada()" classname="mx.edu.cetys.software_quality_lab.pets.PetServiceTest" time="0.005"/>
+  <system-out><![CDATA[2026-05-14T20:52:44.927-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=-5
+2026-05-14T20:52:44.963-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=Labrador, age=-1]
+2026-05-14T20:52:44.969-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=   , age=3]
+2026-05-14T20:52:44.993-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=1
+2026-05-14T20:52:45.007-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=null, race=Labrador, age=3]
+2026-05-14T20:52:45.012-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=, color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:45.016-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=, race=Labrador, age=3]
+2026-05-14T20:52:45.019-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=   , color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:45.023-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=   , race=Labrador, age=3]
+2026-05-14T20:52:45.029-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Max, color=Blanco, race=Husky, age=0]
+2026-05-14T20:52:45.030-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Pet guardado exitosamente, id=2
+2026-05-14T20:52:45.033-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=0
+2026-05-14T20:52:45.039-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=99
+2026-05-14T20:52:45.045-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=null
+2026-05-14T20:52:45.051-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=L, color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:45.055-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=Labrador, age=null]
+2026-05-14T20:52:45.059-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=null, color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:45.067-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:45.068-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Pet guardado exitosamente, id=1
+2026-05-14T20:52:45.074-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Obteniendo todos los Pets de la BD
+2026-05-14T20:52:45.078-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=, age=3]
+2026-05-14T20:52:45.084-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Obteniendo todos los Pets de la BD
+2026-05-14T20:52:45.092-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=null, age=3]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

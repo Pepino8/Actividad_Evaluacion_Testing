@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AdoptionController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">software-quality-lab</a> &gt; <a href="index.source.html" class="el_package">mx.edu.cetys.software_quality_lab.petstore</a> &gt; <span class="el_source">AdoptionController.java</span></div><h1>AdoptionController.java</h1><pre class="source lang-java linenums">package mx.edu.cetys.software_quality_lab.petstore;
+
+import mx.edu.cetys.software_quality_lab.commons.ApiResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(&quot;/petstore&quot;)
+public class AdoptionController {
+
+    // DTOs — definen la forma del request y del response para el módulo de adopciones
+<span class="nc" id="L14">    record AdoptionRequest(Long userId, Long petId) {}</span>
+<span class="nc" id="L15">    record AdoptionResponse(Long id, Long userId, Long petId, String status, String adoptionDate) {}</span>
+<span class="nc" id="L16">    record AdoptionWrapper(AdoptionResponse adoption) {}</span>
+
+    // DTO para listar pets disponibles — vista simplificada del Pet para el petstore
+<span class="nc" id="L19">    record AvailablePetResponse(Long id, String name, String race, String color, Integer age) {}</span>
+
+    private final AdoptionService adoptionService;
+
+<span class="fc" id="L23">    public AdoptionController(AdoptionService adoptionService) {</span>
+<span class="fc" id="L24">        this.adoptionService = adoptionService;</span>
+<span class="fc" id="L25">    }</span>
+
+    // GET /petstore/pets — listar todos los pets disponibles para adopción
+    @GetMapping(&quot;/pets&quot;)
+    @ResponseStatus(HttpStatus.OK)
+    ApiResponse&lt;List&lt;AvailablePetResponse&gt;&gt; listAvailablePets() {
+        // TODO: llamar a adoptionService.listAvailablePets, envolver en ApiResponse y regresar
+<span class="nc" id="L32">        throw new UnsupportedOperationException(&quot;TODO: implementar endpoint listAvailablePets&quot;);</span>
+    }
+
+    // POST /petstore/adoptions — crear una nueva adopción
+    @PostMapping(&quot;/adoptions&quot;)
+    @ResponseStatus(HttpStatus.CREATED)
+    ApiResponse&lt;AdoptionWrapper&gt; createAdoption(@RequestBody AdoptionRequest request) {
+        // TODO: llamar a adoptionService.createAdoption, envolver en ApiResponse y regresar
+<span class="nc" id="L40">        throw new UnsupportedOperationException(&quot;TODO: implementar endpoint createAdoption&quot;);</span>
+    }
+
+    // PATCH /petstore/adoptions/{id}/cancel — cancelar una adopción activa
+    @PatchMapping(&quot;/adoptions/{id}/cancel&quot;)
+    @ResponseStatus(HttpStatus.OK)
+    ApiResponse&lt;AdoptionWrapper&gt; cancelAdoption(@PathVariable Long id) {
+        // TODO: llamar a adoptionService.cancelAdoption, envolver en ApiResponse y regresar
+<span class="nc" id="L48">        throw new UnsupportedOperationException(&quot;TODO: implementar endpoint cancelAdoption&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

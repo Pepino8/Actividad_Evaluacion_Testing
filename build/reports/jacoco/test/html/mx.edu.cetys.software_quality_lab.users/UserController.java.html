@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">software-quality-lab</a> &gt; <a href="index.source.html" class="el_package">mx.edu.cetys.software_quality_lab.users</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package mx.edu.cetys.software_quality_lab.users;
+
+import mx.edu.cetys.software_quality_lab.commons.ApiResponse;
+import mx.edu.cetys.software_quality_lab.users.exceptions.InvalidUserDataException;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(&quot;/users&quot;)
+public class UserController {
+
+    private final UserControllerAdvice userControllerAdvice;
+
+    // DTOs (Data Transfer Objects) — definen la forma del request y del response
+<span class="fc" id="L15">    record UserRequest(String username, String firstName, String lastName, String phone, String email, Integer age) {}</span>
+<span class="fc" id="L16">    record UserResponse(Long id, String username, String firstName, String lastName, String phone, String email, Integer age, String status) {}</span>
+<span class="fc" id="L17">    record UserWrapper(UserResponse user) {}</span>
+
+    private final UserService userService;
+
+<span class="fc" id="L21">    public UserController(UserService userService, UserControllerAdvice userControllerAdvice) {</span>
+<span class="fc" id="L22">        this.userService = userService;</span>
+<span class="fc" id="L23">        this.userControllerAdvice = userControllerAdvice;</span>
+<span class="fc" id="L24">    }</span>
+
+    // POST /users — registrar un nuevo usuario
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED) // HTTP 201: recurso creado exitosamente
+    ApiResponse&lt;UserWrapper&gt; registerUser(@RequestBody UserRequest request) {
+<span class="fc" id="L30">        return new ApiResponse&lt;&gt;(&quot;Usuario registrado exitosamente&quot;, new UserWrapper( userService.registerUser(request)), null);</span>
+    }
+
+    // GET /users/{id} — obtener un usuario por ID
+    @GetMapping(&quot;/{id}&quot;)
+    @ResponseStatus(HttpStatus.OK) // HTTP 200: solicitud exitosa
+    ApiResponse&lt;UserWrapper&gt; getUserById(@PathVariable Long id) {
+<span class="fc" id="L37">        return new ApiResponse&lt;&gt;(&quot;User encontrado&quot;, new UserWrapper(userService.getUserById(id)), null);</span>
+    }
+
+    // PATCH /users/{id}/suspend — suspender un usuario activo
+    @PatchMapping(&quot;/{id}/suspend&quot;)
+    @ResponseStatus(HttpStatus.OK)
+    ApiResponse&lt;UserWrapper&gt; suspendUser(@PathVariable Long id) {
+<span class="fc" id="L44">        return new ApiResponse&lt;&gt;(&quot;Usuario suspendido exitosamente&quot;, new UserWrapper(userService.suspendUser(id)), null);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:46.588Z" hostname="PEPINO" time="0.881">
+  <properties/>
+  <testcase name="[1] values=hello" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.06"/>
+  <testcase name="[2] values=world" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.005"/>
+  <testcase name="[3] values=aaron" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.004"/>
+  <testcase name="[1] a=10, b=10, expected=20" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.085"/>
+  <testcase name="[2] a=0, b=0, expected=0" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.004"/>
+  <testcase name="[3] a=-5, b=5, expected=0" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.005"/>
+  <testcase name="[4] a=1, b=2, expected=3" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.006"/>
+  <testcase name="[1] a=2, expected=4" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.015"/>
+  <testcase name="[2] a=5, expected=10" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.003"/>
+  <testcase name="[1] pet=Pet[name=Perrito, color=negrito, age=15, race=Perro], expected=true" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.012"/>
+  <testcase name="[2] pet=Pet[name=null, color=null, age=10, race=null], expected=false" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.006"/>
+  <testcase name="[3] pet=Pet[name=null, color=null, age=-10, race=null], expected=false" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.004"/>
+  <testcase name="[4] pet=Pet[name=null, color=null, age=11, race=null], expected=true" classname="mx.edu.cetys.software_quality_lab.poc.ParametizedCalculatorTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\pets\PetControllerIntegrationTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\pets\PetServiceTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\petstore\AdoptionControllerIntegrationTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\petstore\AdoptionServiceTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\poc\LifecycleTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\poc\MockitoListTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\poc\ParametizedCalculatorTest$Pet.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\poc\ParametizedCalculatorTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\users\UserControllerIntegrationTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\users\UserServiceTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\validators\EmailValidatorServiceParametizedTest.class
+C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\test\mx\edu\cetys\software_quality_lab\validators\EmailValidatorServiceTest.class

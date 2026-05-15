@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:45.097Z" hostname="PEPINO" time="0.422">
+  <properties/>
+  <testcase name="shouldReturn409WhenPetIsAlreadyAdopted()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.059"/>
+  <testcase name="shouldCancelAdoptionAndReturn200()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.023"/>
+  <testcase name="shouldReturn400WhenAdoptionAlreadyCancelled()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.023"/>
+  <testcase name="shouldReturn404WhenAdoptionNotFound()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.025"/>
+  <testcase name="shouldReturn404WhenUserDoesNotExist()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.028"/>
+  <testcase name="shouldListAvailablePetsAndReturn200()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.03"/>
+  <testcase name="shouldReturn404WhenPetDoesNotExist()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.036"/>
+  <testcase name="shouldReturn422WhenUserIsSuspended()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.026"/>
+  <testcase name="shouldReturn422WhenUserIsTooYoung()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.022"/>
+  <testcase name="shouldCreateAdoptionAndReturn201()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.036"/>
+  <testcase name="shouldReturn422WhenUserHasThreeActiveAdoptions()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest" time="0.03"/>
+  <system-out><![CDATA[2026-05-14T20:52:45.100-07:00  INFO 23448 --- [    Test worker] [                                                 ] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest]: AdoptionControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-14T20:52:45.153-07:00  INFO 23448 --- [    Test worker] [                                                 ] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.cetys.software_quality_lab.LaboratorioPruebasDeSoftwareApplication for test class mx.edu.cetys.software_quality_lab.petstore.AdoptionControllerIntegrationTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

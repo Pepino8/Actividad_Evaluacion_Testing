@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:45.521Z" hostname="PEPINO" time="0.321">
+  <properties/>
+  <testcase name="shouldThrowWhenUserIsTooYoungToAdopt()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.285"/>
+  <testcase name="shouldThrowWhenUserDoesNotExist()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.002"/>
+  <testcase name="shouldThrowWhenCancellingAlreadyCancelledAdoption()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.003"/>
+  <testcase name="shouldThrowWhenUserIsSuspended()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.002"/>
+  <testcase name="shouldCreateAdoptionSuccessfully()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.002"/>
+  <testcase name="shouldThrowWhenPetDoesNotExist()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.002"/>
+  <testcase name="shouldCancelAdoptionSuccessfully()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.003"/>
+  <testcase name="shouldThrowWhenCancellingNonExistentAdoption()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.003"/>
+  <testcase name="shouldThrowWhenUserHasReachedMaxAdoptions()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.003"/>
+  <testcase name="shouldAllowAdoptionWhenUserHasTwoActiveAdoptions()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.003"/>
+  <testcase name="shouldThrowWhenUserIsExactlySeventeen()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.003"/>
+  <testcase name="shouldThrowWhenPetIsAlreadyAdopted()" classname="mx.edu.cetys.software_quality_lab.petstore.AdoptionServiceTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

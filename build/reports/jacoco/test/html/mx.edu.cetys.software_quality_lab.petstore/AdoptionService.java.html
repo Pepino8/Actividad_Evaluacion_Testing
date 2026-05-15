@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AdoptionService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">software-quality-lab</a> &gt; <a href="index.source.html" class="el_package">mx.edu.cetys.software_quality_lab.petstore</a> &gt; <span class="el_source">AdoptionService.java</span></div><h1>AdoptionService.java</h1><pre class="source lang-java linenums">package mx.edu.cetys.software_quality_lab.petstore;
+
+import mx.edu.cetys.software_quality_lab.pets.PetRepository;
+import mx.edu.cetys.software_quality_lab.pets.exceptions.PetNotFoundException;
+import mx.edu.cetys.software_quality_lab.users.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class AdoptionService {
+
+<span class="fc" id="L15">    private final Logger log = LoggerFactory.getLogger(AdoptionService.class);</span>
+
+    private final AdoptionRepository adoptionRepository;
+    private final UserRepository userRepository;
+    // petstore reutiliza el PetRepository del módulo pets/ — no duplica entidades
+    private final PetRepository petRepository;
+
+    public AdoptionService(AdoptionRepository adoptionRepository,
+                           UserRepository userRepository,
+<span class="fc" id="L24">                           PetRepository petRepository) {</span>
+<span class="fc" id="L25">        this.adoptionRepository = adoptionRepository;</span>
+<span class="fc" id="L26">        this.userRepository = userRepository;</span>
+<span class="fc" id="L27">        this.petRepository = petRepository;</span>
+<span class="fc" id="L28">    }</span>
+
+    /**
+     * Listar todos los pets disponibles para adopción (available = true).
+     */
+    List&lt;AdoptionController.AvailablePetResponse&gt; listAvailablePets() {
+<span class="nc" id="L34">        log.info(&quot;Obteniendo pets disponibles para adopción&quot;);</span>
+        // TODO: llamar a petRepository.findAllByAvailableTrue(), mapear cada Pet a AvailablePetResponse
+<span class="nc" id="L36">        throw new UnsupportedOperationException(&quot;TODO: implementar listAvailablePets&quot;);</span>
+    }
+
+    /**
+     * Crear una adopción vinculando un usuario con un pet.
+     *
+     * Reglas a implementar (usar la excepción indicada en cada caso):
+     *  1. El usuario debe existir                              → UserNotFoundException
+     *  2. El status del usuario debe ser ACTIVE                → UserNotEligibleException
+     *  3. La edad del usuario debe ser &gt;= 18                   → UserNotEligibleException
+     *  4. El pet debe existir                                  → PetNotFoundException
+     *  5. El pet no debe tener una adopción ACTIVE             → PetAlreadyAdoptedException
+     *  6. El usuario debe tener menos de 3 adopciones ACTIVE   → MaxAdoptionsReachedException
+     *
+     * En caso de éxito: marcar pet.available = false, guardar el pet, guardar la adopción y regresar respuesta.
+     */
+    AdoptionController.AdoptionResponse createAdoption(AdoptionController.AdoptionRequest request) {
+<span class="nc" id="L53">        log.info(&quot;Creando adopción, userId={}, petId={}&quot;, request.userId(), request.petId());</span>
+        // TODO: implementar todas las reglas anteriores, persistir y mapear la respuesta
+<span class="nc" id="L55">        throw new UnsupportedOperationException(&quot;TODO: implementar createAdoption&quot;);</span>
+    }
+
+    /**
+     * Cancelar una adopción existente.
+     *
+     * Reglas a implementar:
+     *  1. La adopción debe existir        → AdoptionNotFoundException
+     *  2. La adopción debe estar ACTIVE   → InvalidUserDataException
+     *
+     * En caso de éxito: cambiar adoption.status = CANCELLED, marcar pet.available = true, guardar ambos.
+     */
+    AdoptionController.AdoptionResponse cancelAdoption(Long adoptionId) {
+<span class="nc" id="L68">        log.info(&quot;Cancelando adopción, adoptionId={}&quot;, adoptionId);</span>
+        // TODO: implementar las reglas anteriores, persistir los cambios y mapear la respuesta
+<span class="nc" id="L70">        throw new UnsupportedOperationException(&quot;TODO: implementar cancelAdoption&quot;);</span>
+    }
+
+    private AdoptionController.AdoptionResponse mapToResponse(Adoption adoption) {
+        // TODO: mapear los campos de la Entity Adoption al record AdoptionController.AdoptionResponse
+<span class="nc" id="L75">        throw new UnsupportedOperationException(&quot;TODO: implementar mapToResponse&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

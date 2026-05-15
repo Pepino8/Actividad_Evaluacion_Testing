@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">software-quality-lab</a> &gt; <a href="index.source.html" class="el_package">mx.edu.cetys.software_quality_lab.users</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package mx.edu.cetys.software_quality_lab.users;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = &quot;users&quot;)
+public class User {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String username;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String email;
+    private Integer age;
+
+<span class="fc" id="L20">    @Enumerated(EnumType.STRING)</span>
+    private UserStatus status = UserStatus.ACTIVE;
+
+<span class="fc" id="L23">    public User() {}</span>
+
+<span class="fc" id="L25">    public User(String username, String firstName, String lastName, String phone, String email, Integer age) {</span>
+<span class="fc" id="L26">        this.username = username;</span>
+<span class="fc" id="L27">        this.firstName = firstName;</span>
+<span class="fc" id="L28">        this.lastName = lastName;</span>
+<span class="fc" id="L29">        this.phone = phone;</span>
+<span class="fc" id="L30">        this.email = email;</span>
+<span class="fc" id="L31">        this.age = age;</span>
+<span class="fc" id="L32">        this.status = UserStatus.ACTIVE;</span>
+<span class="fc" id="L33">    }</span>
+
+<span class="fc" id="L35">    public Long getId() { return id; }</span>
+<span class="fc" id="L36">    public void setId(Long id) { this.id = id; }</span>
+
+<span class="fc" id="L38">    public String getUsername() { return username; }</span>
+<span class="nc" id="L39">    public void setUsername(String username) { this.username = username; }</span>
+
+<span class="fc" id="L41">    public String getFirstName() { return firstName; }</span>
+<span class="nc" id="L42">    public void setFirstName(String firstName) { this.firstName = firstName; }</span>
+
+<span class="fc" id="L44">    public String getLastName() { return lastName; }</span>
+<span class="nc" id="L45">    public void setLastName(String lastName) { this.lastName = lastName; }</span>
+
+<span class="fc" id="L47">    public String getPhone() { return phone; }</span>
+<span class="nc" id="L48">    public void setPhone(String phone) { this.phone = phone; }</span>
+
+<span class="fc" id="L50">    public String getEmail() { return email; }</span>
+<span class="nc" id="L51">    public void setEmail(String email) { this.email = email; }</span>
+
+<span class="fc" id="L53">    public Integer getAge() { return age; }</span>
+<span class="nc" id="L54">    public void setAge(Integer age) { this.age = age; }</span>
+
+<span class="fc" id="L56">    public UserStatus getStatus() { return status; }</span>
+<span class="fc" id="L57">    public void setStatus(UserStatus status) { this.status = status; }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

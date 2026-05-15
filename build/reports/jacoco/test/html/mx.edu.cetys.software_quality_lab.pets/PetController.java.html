@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PetController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">software-quality-lab</a> &gt; <a href="index.source.html" class="el_package">mx.edu.cetys.software_quality_lab.pets</a> &gt; <span class="el_source">PetController.java</span></div><h1>PetController.java</h1><pre class="source lang-java linenums">package mx.edu.cetys.software_quality_lab.pets;
+
+import mx.edu.cetys.software_quality_lab.commons.ApiResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+// @RestController indica que esta clase maneja peticiones HTTP y regresa JSON automáticamente
+// @RequestMapping define el prefijo de ruta para todos los endpoints de este controller
+@RestController
+@RequestMapping(&quot;/pets&quot;)
+public class PetController {
+
+    // HTTP Verbs disponibles y sus rutas planeadas:
+    // POST   /pets          → crear un nuevo Pet
+    // GET    /pets          → obtener todos los Pets
+    // GET    /pets/{id}     → obtener un Pet por ID
+    // PUT    /pets/{id}     → reemplazar un Pet completo
+    // PATCH  /pets/{id}     → actualizar campos específicos de un Pet
+    // DELETE /pets/{id}     → eliminar un Pet
+
+    private final PetService petService;
+
+<span class="fc" id="L25">    public PetController(PetService petService) {</span>
+<span class="fc" id="L26">        this.petService = petService;</span>
+<span class="fc" id="L27">    }</span>
+
+    // DTOs (Data Transfer Objects): definen la forma del JSON de entrada (Request) y salida (Response)
+    // Se usan records de Java para mantenerlos inmutables y concisos — equivalente a una clase con solo campos y getters
+<span class="fc" id="L31">    record PetRequest(String name, String color, String race, Integer age) {}</span>
+<span class="fc" id="L32">    record PetResponse(Long id, String name, String color, String race, Integer age, boolean available) {}</span>
+
+    // Wrapper: envuelve el PetResponse dentro del campo &quot;pet&quot; del JSON de respuesta
+<span class="fc" id="L35">    record PetWrapper(PetResponse pet) {}</span>
+
+    // Endpoint de ayuda
+    @GetMapping(&quot;/help&quot;)
+    ApiResponse&lt;PetWrapper&gt; help() {
+<span class="nc" id="L40">        return new ApiResponse&lt;&gt;(&quot;API de Pets — usa POST /pets para crear y GET /pets/{id} para buscar&quot;, null, null);</span>
+    }
+
+    // POST /pets — crear un nuevo Pet
+    // @ResponseStatus(HttpStatus.CREATED) indica que si todo sale bien, el HTTP status es 201
+    // 201 significa &quot;recurso creado exitosamente&quot;
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    ApiResponse&lt;PetWrapper&gt; createPet(@RequestBody PetRequest requestPet) {
+        // @RequestBody deserializa el JSON del body del request a un objeto PetRequest
+<span class="fc" id="L50">        var savedPet = petService.savePet(requestPet);</span>
+<span class="fc" id="L51">        return new ApiResponse&lt;&gt;(&quot;Pet creado exitosamente&quot;, new PetWrapper(savedPet), null);</span>
+    }
+
+    // GET /pets/{id} — buscar un Pet por ID
+    // @PathVariable extrae el valor del segmento {petId} de la URL
+    @GetMapping(&quot;/{petId}&quot;)
+    @ResponseStatus(HttpStatus.OK)
+    ApiResponse&lt;PetWrapper&gt; findPetById(@PathVariable Long petId) {
+<span class="fc" id="L59">        var pet = petService.getPetById(petId);</span>
+<span class="fc" id="L60">        return new ApiResponse&lt;&gt;(&quot;Pet encontrado&quot;, new PetWrapper(pet), null);</span>
+    }
+
+    // GET /pets — obtener todos los Pets
+    // Si no hay pets en BD, regresa lista vacía — nunca un error
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    ApiResponse&lt;List&lt;PetResponse&gt;&gt; getAllPets() {
+<span class="fc" id="L68">        var pets = petService.getAllPets();</span>
+<span class="fc" id="L69">        return new ApiResponse&lt;&gt;(&quot;Pets encontrados: &quot; + pets.size(), pets, null);</span>
+    }
+
+    // PATCH /pets/{id}/available — marcar un pet como disponible para adopción en el petstore
+    @PatchMapping(&quot;/{petId}/available&quot;)
+    @ResponseStatus(HttpStatus.OK)
+    ApiResponse&lt;PetWrapper&gt; markPetAvailable(@PathVariable Long petId) {
+<span class="nc" id="L76">        var pet = petService.markAvailable(petId);</span>
+<span class="nc" id="L77">        return new ApiResponse&lt;&gt;(&quot;Pet marcado como disponible para adopción&quot;, new PetWrapper(pet), null);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

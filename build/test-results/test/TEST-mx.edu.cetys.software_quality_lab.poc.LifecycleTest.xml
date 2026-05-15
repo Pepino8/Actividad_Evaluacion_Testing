@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Lifecycle and Display Name annotations" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:45.848Z" hostname="PEPINO" time="0.011">
+  <properties/>
+  <testcase name="Test 1 &#x1f914; ╰(*°▽°*)╯" classname="mx.edu.cetys.software_quality_lab.poc.LifecycleTest" time="0.004"/>
+  <testcase name="Test 2 &#x1f44c;&#x1f44c;&#x1f44c;" classname="mx.edu.cetys.software_quality_lab.poc.LifecycleTest" time="0.003"/>
+  <system-out><![CDATA[2026-05-14T20:52:45.851-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : Before All Tests
+2026-05-14T20:52:45.853-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : Before Each Test
+2026-05-14T20:52:45.854-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : This is a test 1
+2026-05-14T20:52:45.856-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : After Each Test
+2026-05-14T20:52:45.858-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : Before Each Test
+2026-05-14T20:52:45.858-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : This is a test 2
+2026-05-14T20:52:45.859-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : After Each Test
+2026-05-14T20:52:45.862-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.poc.LifecycleTest                : After All Tests
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

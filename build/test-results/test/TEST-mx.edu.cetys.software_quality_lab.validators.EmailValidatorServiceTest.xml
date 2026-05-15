@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-04-29T06:54:32.216Z" hostname="PEPINO" time="0.405">
+<testsuite name="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:48.999Z" hostname="PEPINO" time="0.072">
   <properties/>
-  <testcase name="shouldReturnTrue_WhenEmailSatisfiesAllStructuralCharacterLengthAndBusinessRules()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.177"/>
-  <testcase name="shouldReturnFalse_WhenUserSectionContainsCharacterOutsideAllowedAlphanumericAndSpecialCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.008"/>
-  <testcase name="shouldReturnFalse_WhenProviderSectionBeforeLastDotIsEmpty()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.005"/>
+  <testcase name="shouldReturnTrue_WhenEmailSatisfiesAllStructuralCharacterLengthAndBusinessRules()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenUserSectionContainsCharacterOutsideAllowedAlphanumericAndSpecialCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
+  <testcase name="shouldReturnFalse_WhenProviderSectionBeforeLastDotIsEmpty()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.001"/>
   <testcase name="shouldReturnFalse_WhenEmailDoesNotContainMandatoryDigitFourAnywhereInTheString()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
-  <testcase name="shouldReturnFalse_WhenEmailContainsUppercaseAlphabeticCharactersAnywhereInTheString()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
-  <testcase name="shouldReturnFalse_WhenEmailParameterIsEmptyString()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.005"/>
-  <testcase name="shouldReturnFalse_WhenProviderSectionContainsCharacterOtherThanLowercaseLettersDigitsOrDot()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.006"/>
-  <testcase name="shouldReturnFalse_WhenEmailTotalLengthExceedsMaximumAllowedOfFortySevenCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.004"/>
-  <testcase name="shouldReturnFalse_WhenDomainSectionLengthExceedsMaximumOfFiveCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
-  <testcase name="shouldReturnFalse_WhenDomainSectionAfterLastDotIsEmpty()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
-  <testcase name="shouldReturnFalse_WhenEmailContainsMoreThanOneHashSeparatorCharacter()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenEmailContainsUppercaseAlphabeticCharactersAnywhereInTheString()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenEmailParameterIsEmptyString()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenProviderSectionContainsCharacterOtherThanLowercaseLettersDigitsOrDot()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenEmailTotalLengthExceedsMaximumAllowedOfFortySevenCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
+  <testcase name="shouldReturnFalse_WhenDomainSectionLengthExceedsMaximumOfFiveCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
+  <testcase name="shouldReturnFalse_WhenDomainSectionAfterLastDotIsEmpty()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
+  <testcase name="shouldReturnFalse_WhenEmailContainsMoreThanOneHashSeparatorCharacter()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
   <testcase name="shouldReturnFalse_WhenEmailContainsTwoConsecutiveVowelCharactersFormingADiphthong()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
-  <testcase name="shouldReturnFalse_WhenEmailParameterIsNull()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.005"/>
-  <testcase name="shouldReturnFalse_WhenUserSectionBeforeHashSeparatorIsEmpty()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenEmailParameterIsNull()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenUserSectionBeforeHashSeparatorIsEmpty()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
   <testcase name="shouldReturnFalse_WhenProviderAndDomainSectionAfterHashSeparatorIsEmpty()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.004"/>
-  <testcase name="shouldReturnFalse_WhenEmailParameterContainsOnlyWhitespaceCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
-  <testcase name="shouldReturnFalse_WhenEmailDoesNotContainExactlyOneHashSeparatorBetweenUserAndProvider()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.003"/>
+  <testcase name="shouldReturnFalse_WhenEmailParameterContainsOnlyWhitespaceCharacters()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
+  <testcase name="shouldReturnFalse_WhenEmailDoesNotContainExactlyOneHashSeparatorBetweenUserAndProvider()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
   <testcase name="shouldReturnFalse_WhenProviderAndDomainSectionDoesNotContainDotSeparator()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

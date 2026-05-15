@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.poc.MockitoListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:45.863Z" hostname="PEPINO" time="0.712">
+  <properties/>
+  <testcase name="shouldMock_ListGetWithParameters()" classname="mx.edu.cetys.software_quality_lab.poc.MockitoListTest" time="0.607"/>
+  <testcase name="shouldReturn_CustomSizeWhenMocked()" classname="mx.edu.cetys.software_quality_lab.poc.MockitoListTest" time="0.049"/>
+  <testcase name="mock_EmailValidator_withArgumentMatchers()" classname="mx.edu.cetys.software_quality_lab.poc.MockitoListTest" time="0.031"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

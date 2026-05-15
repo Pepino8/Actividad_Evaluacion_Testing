@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:23.495Z" hostname="PEPINO" time="20.918">
+  <properties/>
+  <testcase name="shouldReturn400WhenNameIsTooShort()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="1.609"/>
+  <testcase name="shouldReturn400WhenRaceIsBlank()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.024"/>
+  <testcase name="shouldReturn400WhenAgeIsNegative()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.029"/>
+  <testcase name="shouldReturn400WhenAgeIsNull()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.026"/>
+  <testcase name="shouldReturn400WhenRaceIsNull()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.037"/>
+  <testcase name="shouldReturn400WhenColorIsNull()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.044"/>
+  <testcase name="shouldReturn201WhenAgeIsZero()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.361"/>
+  <testcase name="shouldReturn200WhenPetExists()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.117"/>
+  <testcase name="shouldReturn400WhenColorIsBlank()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.018"/>
+  <testcase name="shouldReturn400WhenNameIsNull()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.016"/>
+  <testcase name="shouldReturn400WhenPetIdIsZero()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.016"/>
+  <testcase name="shouldReturn400WhenNameIsBlank()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.017"/>
+  <testcase name="shouldCreatePetAndReturn201()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.04"/>
+  <testcase name="shouldReturn200WithAllPets()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.052"/>
+  <testcase name="shouldReturn404WhenPetNotFound()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.023"/>
+  <testcase name="shouldReturn200WithEmptyListWhenNoPetsExist()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.019"/>
+  <testcase name="shouldReturn400WhenPetIdIsNegative()" classname="mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest" time="0.014"/>
+  <system-out><![CDATA[20:52:23.985 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest]: PetControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:52:24.424 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration mx.edu.cetys.software_quality_lab.LaboratorioPruebasDeSoftwareApplication for test class mx.edu.cetys.software_quality_lab.pets.PetControllerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.10)
+
+2026-05-14T20:52:25.777-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.p.PetControllerIntegrationTest   : Starting PetControllerIntegrationTest using Java 25.0.2 with PID 23448 (started by crist in C:\Users\crist\OneDrive\Escritorio\Testing)
+2026-05-14T20:52:25.782-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.p.PetControllerIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
+2026-05-14T20:52:27.985-07:00  INFO 23448 --- [    Test worker] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-14T20:52:28.124-07:00  INFO 23448 --- [    Test worker] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 3 JPA repository interfaces.
+2026-05-14T20:52:29.483-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-05-14T20:52:29.522-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-14T20:52:29.523-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-05-14T20:52:29.712-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-14T20:52:29.714-07:00  INFO 23448 --- [    Test worker] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3884 ms
+2026-05-14T20:52:30.481-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-14T20:52:30.703-07:00  INFO 23448 --- [    Test worker] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.41.Final
+2026-05-14T20:52:30.820-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-14T20:52:31.781-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-14T20:52:31.881-07:00  INFO 23448 --- [    Test worker] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-14T20:52:32.585-07:00  INFO 23448 --- [    Test worker] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-05-14T20:52:32.589-07:00  INFO 23448 --- [    Test worker] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-14T20:52:32.779-07:00  INFO 23448 --- [    Test worker] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-14T20:52:35.326-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-14T20:52:35.445-07:00  INFO 23448 --- [    Test worker] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-14T20:52:36.356-07:00  WARN 23448 --- [    Test worker] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-14T20:52:37.647-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2026-05-14T20:52:37.648-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-14T20:52:37.662-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-14T20:52:37.681-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 32 ms
+2026-05-14T20:52:37.868-07:00  INFO 23448 --- [cTaskExecutor-1] [                                                 ] com.tngtech.archunit.core.PluginLoader   : Detected Java version 25.0.2
+2026-05-14T20:52:41.612-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 50474 (http) with context path '/'
+2026-05-14T20:52:41.645-07:00  INFO 23448 --- [    Test worker] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2026-05-14T20:52:41.657-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.p.PetControllerIntegrationTest   : Started PetControllerIntegrationTest in 16.658 seconds (process running for 21.767)
+2026-05-14T20:52:43.344-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=L, color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:43.539-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=, age=3]
+2026-05-14T20:52:43.570-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=Labrador, age=-1]
+2026-05-14T20:52:43.600-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=Labrador, age=null]
+2026-05-14T20:52:43.636-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=Negro, race=null, age=3]
+2026-05-14T20:52:43.678-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=null, race=Labrador, age=3]
+2026-05-14T20:52:43.732-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Bebé, color=Blanco, race=Poodle, age=0]
+2026-05-14T20:52:44.013-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Pet guardado exitosamente, id=1
+2026-05-14T20:52:44.143-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=2
+2026-05-14T20:52:44.198-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=Luna, color=   , race=Labrador, age=3]
+2026-05-14T20:52:44.217-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=null, color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:44.233-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=0
+2026-05-14T20:52:44.251-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=   , color=Negro, race=Labrador, age=3]
+2026-05-14T20:52:44.269-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Iniciando validaciones del Pet, requestPet=PetRequest[name=pop, color=blanco y negro, race=dalmata, age=1]
+2026-05-14T20:52:44.272-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Pet guardado exitosamente, id=3
+2026-05-14T20:52:44.319-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Obteniendo todos los Pets de la BD
+2026-05-14T20:52:44.369-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=9999
+2026-05-14T20:52:44.389-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Obteniendo todos los Pets de la BD
+2026-05-14T20:52:44.407-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.pets.PetService                  : Buscando Pet por ID, petId=-1
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\crist\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.17.8\f09415827a71be7ed621c7bd02550678f28bc81c\byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

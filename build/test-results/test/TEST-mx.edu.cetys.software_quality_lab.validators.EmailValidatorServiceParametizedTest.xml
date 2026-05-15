@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceParametizedTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:48.920Z" hostname="PEPINO" time="0.066">
+  <properties/>
+  <testcase name="shouldReturnTrue_WhenEmailSatisfiesAllStructuralCharacterLengthAndBusinessRules()" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceParametizedTest" time="0.005"/>
+  <testcase name="[1] email=user4#provider.abcdef" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceParametizedTest" time="0.009"/>
+  <testcase name="[2] email=us$er4#provider.com" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceParametizedTest" time="0.005"/>
+  <testcase name="[3] email=user4#pro-vider.com" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceParametizedTest" time="0.005"/>
+  <testcase name="[4] email=User4#provider.com" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceParametizedTest" time="0.005"/>
+  <testcase name="[5] email=us4er#aa.provider.com" classname="mx.edu.cetys.software_quality_lab.validators.EmailValidatorServiceParametizedTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

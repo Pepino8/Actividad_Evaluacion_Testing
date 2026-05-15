@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mx.edu.cetys.software_quality_lab.users.UserServiceTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:48.663Z" hostname="PEPINO" time="0.252">
+  <properties/>
+  <testcase name="shouldThrowWhenFirstNameContainsNumbers()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.013"/>
+  <testcase name="shouldThrowWhenPhoneHasWrongLength()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.01"/>
+  <testcase name="shouldGetUserByIdSuccessfully()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.011"/>
+  <testcase name="shouldThrowWhenAgeIsBelowTwelve()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.009"/>
+  <testcase name="shouldThrowWhenUsernameHasInvalidChars()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.015"/>
+  <testcase name="shouldSuspendActiveUserSuccessfully()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.012"/>
+  <testcase name="shouldThrowWhenUsernameTooShort()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.011"/>
+  <testcase name="shouldThrowWhenLastNameTooShort()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.014"/>
+  <testcase name="shouldThrowWhenAgeExceedsMaximum()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.008"/>
+  <testcase name="shouldThrowWhenUsernameStartsWithUnderscore()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.01"/>
+  <testcase name="shouldThrowWhenSuspendingAlreadySuspendedUser()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.014"/>
+  <testcase name="shouldThrowWhenPhoneContainsLetters()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.012"/>
+  <testcase name="shouldThrowWhenUsernameTooLong()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.013"/>
+  <testcase name="shouldThrowWhenFirstNameTooShort()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.012"/>
+  <testcase name="shouldThrowWhenAgeIsExactlyTwelve()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.008"/>
+  <testcase name="shouldThrowWhenUserNotFound()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.019"/>
+  <testcase name="shouldThrowWhenUsernameEndsWithUnderscore()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.014"/>
+  <testcase name="shouldThrowWhenLastNameContainsNumbers()" classname="mx.edu.cetys.software_quality_lab.users.UserServiceTest" time="0.01"/>
+  <system-out><![CDATA[2026-05-14T20:52:48.675-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=nombrevalido
+Invalid first name
+2026-05-14T20:52:48.687-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan_pro
+2026-05-14T20:52:48.699-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Buscando usuario por ID, id=1
+2026-05-14T20:52:48.699-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Getting pet by id 1
+2026-05-14T20:52:48.710-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan_pro
+2026-05-14T20:52:48.726-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=User@Name
+Invalid username
+2026-05-14T20:52:48.741-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Suspendiendo usuario, id=1
+2026-05-14T20:52:48.756-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan
+Invalid username
+2026-05-14T20:52:48.771-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan_pro
+Invalid last name
+2026-05-14T20:52:48.783-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan_pro
+2026-05-14T20:52:48.794-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=_nombrevalido
+Invalid username
+2026-05-14T20:52:48.809-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Suspendiendo usuario, id=1
+2026-05-14T20:52:48.823-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan_pro
+2026-05-14T20:52:48.839-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juanusernameme_gaultralargo
+Invalid username
+2026-05-14T20:52:48.851-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=nombrevalido
+Invalid first name
+2026-05-14T20:52:48.863-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan_pro
+2026-05-14T20:52:48.876-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Buscando usuario por ID, id=1
+2026-05-14T20:52:48.878-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Getting pet by id 1
+2026-05-14T20:52:48.899-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=nombrevalido_
+Invalid username
+2026-05-14T20:52:48.912-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan_pro
+Invalid last name
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

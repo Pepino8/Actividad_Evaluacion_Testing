@@ -1,0 +1,356 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+				color: red;
+				font-weight: bold;
+		}
+		.priority-2 {
+				color: orange;
+				font-weight: bold;
+		}
+		.priority-3 {
+				color: green;
+				font-weight: bold;
+		}
+		.priority-4 {
+				color: blue;
+				font-weight: bold;
+		}
+		</style>
+      <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+   </head>
+   <body>
+      <h1>
+         <a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+      <h2>Project Information</h2>
+      <p>Project: 
+		software-quality-lab (spotbugsMain)</p>
+      <p>SpotBugs version: 4.9.3</p>
+      <p>Code analyzed:</p>
+      <ul>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\commons\ApiResponse.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\LaboratorioPruebasDeSoftwareApplication.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\exceptions\InvalidPetDataException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\exceptions\PetNotFoundException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\Pet.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController$PetRequest.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController$PetResponse.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController$PetWrapper.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetControllerAdvice.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetRepository.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetService.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\Adoption.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AdoptionRequest.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AdoptionResponse.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AdoptionWrapper.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AvailablePetResponse.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionRepository.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionService.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionStatus.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\AdoptionNotFoundException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\MaxAdoptionsReachedException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\PetAlreadyAdoptedException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\UserNotEligibleException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\PetstoreControllerAdvice.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\exceptions\DuplicateUsernameException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\exceptions\InvalidUserDataException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\exceptions\UserNotFoundException.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\User.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController$UserRequest.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController$UserResponse.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController$UserWrapper.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserControllerAdvice.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserRepository.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserService.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserStatus.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserValidatorService.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\validators\EmailValidatorService$Parts.class</li>
+         <li>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\validators\EmailValidatorService.class</li>
+      </ul>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Metrics</h2>
+      <p>699 lines of code analyzed,
+	in 41 classes, 
+	in 9 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">1</td>
+            <td align="right">1.43</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">6</td>
+            <td align="right">8.58</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>7</b>
+            </td>
+            <td align="right">
+               <b>10.01</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Contents</h2>
+      <ul>
+         <li>
+            <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+         </li>
+         <li>
+            <a href="#Details">Details</a>
+         </li>
+      </ul>
+      <h1>Summary</h1>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </td>
+            <td align="right">6</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>7</b>
+            </td>
+         </tr>
+      </table>
+      <h1>Warnings</h1>
+      <p>Click on a warning row to see full context information.</p>
+      <h2>
+         <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e114');">
+            <td>
+               <span class="priority-2">EI</span>
+            </td>
+            <td>mx.edu.cetys.software_quality_lab.petstore.Adoption.getPet() may expose internal representation by returning Adoption.pet</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e114" style="display: none;">
+                  <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+                  <br/>In class mx.edu.cetys.software_quality_lab.petstore.Adoption<br/>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.getPet()<br/>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.pet<br/>At Adoption.java:[line 46]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e130');">
+            <td>
+               <span class="priority-2">EI</span>
+            </td>
+            <td>mx.edu.cetys.software_quality_lab.petstore.Adoption.getUser() may expose internal representation by returning Adoption.user</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e130" style="display: none;">
+                  <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+                  <br/>In class mx.edu.cetys.software_quality_lab.petstore.Adoption<br/>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.getUser()<br/>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.user<br/>At Adoption.java:[line 43]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e146');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet) may expose internal representation by storing an externally mutable object into Adoption.pet</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e146" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class mx.edu.cetys.software_quality_lab.petstore.Adoption<br/>In method new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet)<br/>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.pet<br/>Local variable named pet<br/>At Adoption.java:[line 35]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e164');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet) may expose internal representation by storing an externally mutable object into Adoption.user</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e164" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class mx.edu.cetys.software_quality_lab.petstore.Adoption<br/>In method new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet)<br/>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.user<br/>Local variable named user<br/>At Adoption.java:[line 34]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e182');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>mx.edu.cetys.software_quality_lab.petstore.Adoption.setPet(Pet) may expose internal representation by storing an externally mutable object into Adoption.pet</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e182" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class mx.edu.cetys.software_quality_lab.petstore.Adoption<br/>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.setPet(Pet)<br/>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.pet<br/>Local variable named pet<br/>At Adoption.java:[line 47]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e200');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>mx.edu.cetys.software_quality_lab.petstore.Adoption.setUser(User) may expose internal representation by storing an externally mutable object into Adoption.user</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e200" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class mx.edu.cetys.software_quality_lab.petstore.Adoption<br/>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.setUser(User)<br/>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.user<br/>Local variable named user<br/>At Adoption.java:[line 44]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e218');">
+            <td>
+               <span class="priority-1">ST</span>
+            </td>
+            <td>Write to static field mx.edu.cetys.software_quality_lab.users.UserValidatorService.userRepository from instance method new mx.edu.cetys.software_quality_lab.users.UserValidatorService(EmailValidatorService, UserRepository)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e218" style="display: none;">
+                  <a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+                  <br/>In class mx.edu.cetys.software_quality_lab.users.UserValidatorService<br/>In method new mx.edu.cetys.software_quality_lab.users.UserValidatorService(EmailValidatorService, UserRepository)<br/>Field mx.edu.cetys.software_quality_lab.users.UserValidatorService.userRepository<br/>At UserValidatorService.java:[line 18]</p>
+            </td>
+         </tr>
+      </table>
+      <h1>
+         <a name="Details">Details</a>
+      </h1>
+      <h2>
+         <a name="EI_EXPOSE_REP">EI_EXPOSE_REP: May expose internal representation by returning reference to mutable object</a>
+      </h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    <h2>
+         <a name="EI_EXPOSE_REP2">EI_EXPOSE_REP2: May expose internal representation by incorporating reference to mutable object</a>
+      </h2>
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    <h2>
+         <a name="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD: Write to static field from instance method</a>
+      </h2>
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    </body>
+</html>

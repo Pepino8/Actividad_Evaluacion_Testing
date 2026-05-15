@@ -1,222 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" tests="10" skipped="0" failures="3" errors="0" timestamp="2026-04-29T05:45:17.231Z" hostname="PEPINO" time="9.808">
+<testsuite name="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-05-15T03:52:47.482Z" hostname="PEPINO" time="1.168">
   <properties/>
-  <testcase name="shouldReturn400WhenUsernameIsTooShort()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.635"/>
-  <testcase name="shouldReturn404WhenUserNotFound()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.014"/>
-  <testcase name="shouldReturn400WhenEmailIsInvalid()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.009"/>
-  <testcase name="shouldSuspendUserAndReturn200()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.107">
-    <failure message="com.jayway.jsonpath.PathNotFoundException: Missing property in path $['user']" type="com.jayway.jsonpath.PathNotFoundException">com.jayway.jsonpath.PathNotFoundException: Missing property in path $['user']
-</failure>
-  </testcase>
-  <testcase name="shouldCreateUserAndReturn201()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.025"/>
-  <testcase name="shouldReturn200AndUserWhenFound()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.016">
-    <failure message="com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']" type="com.jayway.jsonpath.PathNotFoundException">com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
-</failure>
-  </testcase>
-  <testcase name="shouldReturn400WhenSuspendingAlreadySuspendedUser()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.013">
-    <failure message="com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']" type="com.jayway.jsonpath.PathNotFoundException">com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
-</failure>
-  </testcase>
-  <testcase name="shouldReturn400WhenAgeIsExactlyTwelve()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.011"/>
-  <testcase name="shouldReturn409WhenUsernameIsDuplicated()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.013"/>
-  <testcase name="shouldReturn400WhenPhoneIsInvalid()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.01"/>
-  <system-out><![CDATA[22:45:17.382 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest]: UserControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:45:17.531 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration mx.edu.cetys.software_quality_lab.LaboratorioPruebasDeSoftwareApplication for test class mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-
- :: Spring Boot ::               (v3.5.10)
-
-2026-04-28T22:45:18.067-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.u.UserControllerIntegrationTest  : Starting UserControllerIntegrationTest using Java 25.0.2 with PID 15128 (started by crist in C:\Users\crist\OneDrive\Escritorio\Testing)
-2026-04-28T22:45:18.070-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.u.UserControllerIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
-2026-04-28T22:45:19.179-07:00  INFO 15128 --- [    Test worker] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-28T22:45:19.259-07:00  INFO 15128 --- [    Test worker] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
-2026-04-28T22:45:20.056-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2026-04-28T22:45:20.078-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-28T22:45:20.079-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
-2026-04-28T22:45:20.183-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-28T22:45:20.184-07:00  INFO 15128 --- [    Test worker] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2096 ms
-2026-04-28T22:45:20.836-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-04-28T22:45:20.982-07:00  INFO 15128 --- [    Test worker] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.41.Final
-2026-04-28T22:45:21.050-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-04-28T22:45:21.471-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-28T22:45:21.508-07:00  INFO 15128 --- [    Test worker] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-28T22:45:21.737-07:00  INFO 15128 --- [    Test worker] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-04-28T22:45:21.738-07:00  INFO 15128 --- [    Test worker] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-28T22:45:21.793-07:00  INFO 15128 --- [    Test worker] [                                                 ] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-04-28T22:45:22.662-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-28T22:45:22.715-07:00  INFO 15128 --- [    Test worker] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-28T22:45:23.236-07:00  WARN 15128 --- [    Test worker] [                                                 ] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-28T22:45:24.039-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2026-04-28T22:45:24.040-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-28T22:45:24.050-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-04-28T22:45:24.063-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 23 ms
-2026-04-28T22:45:24.149-07:00  INFO 15128 --- [cTaskExecutor-1] [                                                 ] com.tngtech.archunit.core.PluginLoader   : Detected Java version 25.0.2
-2026-04-28T22:45:26.083-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 63762 (http) with context path '/'
-2026-04-28T22:45:26.096-07:00  INFO 15128 --- [    Test worker] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
-2026-04-28T22:45:26.101-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.u.UserControllerIntegrationTest  : Started UserControllerIntegrationTest in 8.393 seconds (process running for 9.641)
-2026-04-28T22:45:26.776-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
+  <testcase name="shouldReturn400WhenUsernameIsTooShort()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.096"/>
+  <testcase name="shouldReturn404WhenUserNotFound()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.07"/>
+  <testcase name="shouldReturn400WhenEmailIsInvalid()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.052"/>
+  <testcase name="shouldSuspendUserAndReturn200()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.374"/>
+  <testcase name="shouldCreateUserAndReturn201()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.038"/>
+  <testcase name="shouldReturn200AndUserWhenFound()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.074"/>
+  <testcase name="shouldReturn400WhenSuspendingAlreadySuspendedUser()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.102"/>
+  <testcase name="shouldReturn400WhenAgeIsExactlyTwelve()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.046"/>
+  <testcase name="shouldReturn409WhenUsernameIsDuplicated()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.061"/>
+  <testcase name="shouldReturn400WhenPhoneIsInvalid()" classname="mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest" time="0.049"/>
+  <system-out><![CDATA[2026-05-14T20:52:47.504-07:00  INFO 23448 --- [    Test worker] [                                                 ] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest]: UserControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-14T20:52:47.628-07:00  INFO 23448 --- [    Test worker] [                                                 ] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration mx.edu.cetys.software_quality_lab.LaboratorioPruebasDeSoftwareApplication for test class mx.edu.cetys.software_quality_lab.users.UserControllerIntegrationTest
+2026-05-14T20:52:47.723-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
 Invalid username
-2026-04-28T22:45:26.836-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
+2026-05-14T20:52:47.863-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
 Invalid username
-2026-04-28T22:45:26.848-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /users
-       Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"154"]
-             Body = {
-    "username": "juan4_dev",
-    "firstName": "Juan",
-    "lastName": "Pérez",
-    "phone": "6641234567",
-    "email": "jan4#gmil.com",
-    "age": 25
-}
-    Session Attrs = {}
-
-Handler:
-             Type = mx.edu.cetys.software_quality_lab.users.UserController
-           Method = mx.edu.cetys.software_quality_lab.users.UserController#registerUser(UserRequest)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 201
-    Error message = null
-          Headers = [Content-Type:"application/json"]
-     Content type = application/json
-             Body = {"info":"Usuario registrado exitosamente","response":{"user":{"id":1,"username":"juan4_dev","firstName":"Juan","lastName":"Pérez","phone":"6641234567","email":"jan4#gmil.com","age":25,"status":"ACTIVE"}},"error":null}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-2026-04-28T22:45:26.961-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
-2026-04-28T22:45:26.980-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /users
-       Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"154"]
-             Body = {
-    "username": "juan4_dev",
-    "firstName": "Juan",
-    "lastName": "Pérez",
-    "phone": "6641234567",
-    "email": "jan4#gmil.com",
-    "age": 25
-}
-    Session Attrs = {}
-
-Handler:
-             Type = mx.edu.cetys.software_quality_lab.users.UserController
-           Method = mx.edu.cetys.software_quality_lab.users.UserController#registerUser(UserRequest)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 201
-    Error message = null
-          Headers = [Content-Type:"application/json"]
-     Content type = application/json
-             Body = {"info":"Usuario registrado exitosamente","response":{"user":{"id":3,"username":"juan4_dev","firstName":"Juan","lastName":"Pérez","phone":"6641234567","email":"jan4#gmil.com","age":25,"status":"ACTIVE"}},"error":null}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-2026-04-28T22:45:26.996-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
-
-MockHttpServletRequest:
-      HTTP Method = POST
-      Request URI = /users
-       Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"154"]
-             Body = {
-    "username": "juan4_dev",
-    "firstName": "Juan",
-    "lastName": "Pérez",
-    "phone": "6641234567",
-    "email": "jan4#gmil.com",
-    "age": 25
-}
-    Session Attrs = {}
-
-Handler:
-             Type = mx.edu.cetys.software_quality_lab.users.UserController
-           Method = mx.edu.cetys.software_quality_lab.users.UserController#registerUser(UserRequest)
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 201
-    Error message = null
-          Headers = [Content-Type:"application/json"]
-     Content type = application/json
-             Body = {"info":"Usuario registrado exitosamente","response":{"user":{"id":4,"username":"juan4_dev","firstName":"Juan","lastName":"Pérez","phone":"6641234567","email":"jan4#gmil.com","age":25,"status":"ACTIVE"}},"error":null}
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-2026-04-28T22:45:27.012-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
+2026-05-14T20:52:47.914-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
+2026-05-14T20:52:48.169-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Suspendiendo usuario, id=3
+2026-05-14T20:52:48.284-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
+2026-05-14T20:52:48.329-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
+2026-05-14T20:52:48.354-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Buscando usuario por ID, id=5
+2026-05-14T20:52:48.355-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Getting pet by id 5
+2026-05-14T20:52:48.415-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
+2026-05-14T20:52:48.441-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Suspendiendo usuario, id=6
+2026-05-14T20:52:48.460-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Suspendiendo usuario, id=6
+2026-05-14T20:52:48.518-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
 Invalid username
-2026-04-28T22:45:27.023-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
-2026-04-28T22:45:27.036-07:00  INFO 15128 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
+2026-05-14T20:52:48.563-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=juan4_dev
+2026-05-14T20:52:48.634-07:00  INFO 23448 --- [    Test worker] [                                                 ] m.e.c.s.users.UserService                : Iniciando registro de usuario, username=abcd
 Invalid username
 ]]></system-out>
-  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
-WARNING: A Java agent has been loaded dynamically (C:\Users\crist\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.17.8\f09415827a71be7ed621c7bd02550678f28bc81c\byte-buddy-agent-1.17.8.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

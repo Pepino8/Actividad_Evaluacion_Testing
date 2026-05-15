@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.9.3" sequence="0" timestamp="1778816821257" analysisTimestamp="1778816821257" release="">
+  <Project projectName="software-quality-lab (spotbugsMain)">
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\commons\ApiResponse.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\LaboratorioPruebasDeSoftwareApplication.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\exceptions\InvalidPetDataException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\exceptions\PetNotFoundException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\Pet.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController$PetRequest.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController$PetResponse.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController$PetWrapper.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetController.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetControllerAdvice.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetRepository.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\pets\PetService.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\Adoption.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AdoptionRequest.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AdoptionResponse.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AdoptionWrapper.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController$AvailablePetResponse.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionController.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionRepository.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionService.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\AdoptionStatus.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\AdoptionNotFoundException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\MaxAdoptionsReachedException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\PetAlreadyAdoptedException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\exceptions\UserNotEligibleException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\petstore\PetstoreControllerAdvice.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\exceptions\DuplicateUsernameException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\exceptions\InvalidUserDataException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\exceptions\UserNotFoundException.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\User.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController$UserRequest.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController$UserResponse.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController$UserWrapper.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserController.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserControllerAdvice.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserRepository.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserService.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserStatus.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\users\UserValidatorService.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\validators\EmailValidatorService$Parts.class</Jar>
+    <Jar>C:\Users\crist\OneDrive\Escritorio\Testing\build\classes\java\main\mx\edu\cetys\software_quality_lab\validators\EmailValidatorService.class</Jar>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-actuator\3.5.10\dcc77a898bb4021b765ce992a9c2a7c8f2c30366\spring-boot-starter-actuator-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\3.5.10\c954b53a9f744b88ccbbfbf01ad3996b9e5f7958\spring-boot-starter-web-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-data-jpa\3.5.10\c41a9d32f1fb3da7572c92595e38777bbd5b3c49\spring-boot-starter-data-jpa-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.modulith\spring-modulith-starter-core\1.4.7\11147a07833554f3421d56de949fa04d91586c84\spring-modulith-starter-core-1.4.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\3.5.10\eaa1fcf36ca86545e2943552f24183e6b42341ca\spring-boot-starter-json-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jdbc\3.5.10\7d70e343acbe7768180bd441fe761054b8241f55\spring-boot-starter-jdbc-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\3.5.10\f99cf2316a820ddf23bd930fd4b46019237be0b3\spring-boot-starter-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-actuator-autoconfigure\3.5.10\2538086d605b5e17c363ec674660a69f9e2abe38\spring-boot-actuator-autoconfigure-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-jakarta9\1.15.8\d1340fcf3fcc464d5c1d94fc88bc16390d7abe57\micrometer-jakarta9-1.15.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\6.2.15\f290f07e991291b7a67a472ea88d07e9d153c379\spring-webmvc-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\6.2.15\1d43a99df84fc7981dd1ff3b0d339a254c6f3a59\spring-web-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-core\1.15.8\2939dfff16ed7e998719ebeffc57c21877c2ab62\micrometer-core-1.15.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-jpa\3.5.8\22ea2ee798b43e6ddd40e924903fe936af73142\spring-data-jpa-3.5.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.modulith\spring-modulith-apt\1.4.7\591fec4abd79de1716d0ce1982cdd0216b777754\spring-modulith-apt-1.4.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\3.5.10\41f377b744721f27fde8d647b723cfbf3a821a8d\spring-boot-autoconfigure-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-actuator\3.5.10\59db7c8156d068a6602bc161fd45e9e41f609ff4\spring-boot-actuator-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\3.5.10\9d3e0f910cc3c435a5268d4ad215a890006b92aa\spring-boot-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\6.2.15\a721a75d6be895a4ffa1e6b0dc6a77d78ee7ca0d\spring-context-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-observation\1.15.8\609bf17faca7f9a860dea92f959152d1d586d845\micrometer-observation-1.15.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\3.5.10\cd56115816663f544519ac50ccc96090c1536e25\spring-boot-starter-tomcat-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.hibernate.orm\hibernate-core\6.6.41.Final\72b171744cfbf445620f4f478082a0e8293c6fa8\hibernate-core-6.6.41.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aspects\6.2.15\584133cedf27e8b8694812f4a50395c3c3cc3f0f\spring-aspects-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.modulith\spring-modulith-api\1.4.7\a25792a70e6b4ed7dbf9e20a17c7abd2fd3b6398\spring-modulith-api-1.4.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.modulith\spring-modulith-moments\1.4.7\a10ed7e56541d6431df9692669c41abbc3959aa0\spring-modulith-moments-1.4.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\3.5.10\968a1213daa274e9c7eda18c7f481778b21c5cf8\spring-boot-starter-logging-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\jakarta.annotation\jakarta.annotation-api\2.1.1\48b9bda22b091b1f48b13af03fe36db3be6e1ae3\jakarta.annotation-api-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\6.2.15\921099294cbe4b7ceb278644a530f14ecd1df580\spring-aop-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-orm\6.2.15\38c4bf42bc06205b7261683e697d57a2d026b1f\spring-orm-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\6.2.15\c12dc9fb0b4c21a53c1f464645c2af94ef1e638f\spring-jdbc-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-commons\3.5.8\5b2b78c3f53f4d07d2ca3be2028cb1868ce3bef7\spring-data-commons-3.5.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\6.2.15\9ce8624687627b1570cedb6a8506507464978276\spring-tx-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\6.2.15\1d0ad7873e865fc9d47c3aac7b7ffb6d0d1500c5\spring-beans-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\6.2.15\9f2d3bb55e9fe32576463daed7d245685420d04\spring-expression-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\6.2.15\f4744d35266cf76d71e284308f194fb513364ca2\spring-core-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\2.4\e0666b825b796f85521f02360e77f4c92c5a7a07\snakeyaml-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\io.micrometer\micrometer-commons\1.15.8\a850d358fadc1354d40071db693caaca27b542fd\micrometer-commons-1.15.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\2.19.4\3cbcf2e636a6b062772299bf19a347536e58c4df\jackson-datatype-jsr310-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.module\jackson-module-parameter-names\2.19.4\502dfea4c83502f444837b3d040a51e8475f15f2\jackson-module-parameter-names-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.19.4\bbb09b1e7f7f5108890270eb701cb3ddef991c05\jackson-annotations-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.19.4\a720ca9b800742699e041c3890f3731fe516085e\jackson-core-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\2.19.4\90d304bcdb1a4bacb6f4347be625d75300973c60\jackson-datatype-jdk8-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.19.4\7a39bf9257b726b90b80f27fa3f5174bc75162a5\jackson-databind-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-websocket\10.1.50\f729d47835e40396ebc4bd7217c2d80994b6fa32\tomcat-embed-websocket-10.1.50.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\10.1.50\dcea3450bf8d83ca782297681c9703a4282e4a8c\tomcat-embed-core-10.1.50.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-el\10.1.50\85a483e2bd7325cbc642f896ff844ddbab2d390d\tomcat-embed-el-10.1.50.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\com.zaxxer\HikariCP\6.3.3\7c5aec1e47a97ff40977e0193018865304ea9585\HikariCP-6.3.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\jakarta.persistence\jakarta.persistence-api\3.1.0\66901fa1c373c6aff65c13791cc11da72060a8d6\jakarta.persistence-api-3.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\jakarta.transaction\jakarta.transaction-api\2.0.1\51a520e3fae406abb84e2e1148e6746ce3f80a1a\jakarta.transaction-api-2.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.antlr\antlr4-runtime\4.13.0\5a02e48521624faaf5ff4d99afc88b01686af655\antlr4-runtime-4.13.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.5.25\20c4bbe98fb58f50ee1ca6befd7e7731f13a19d3\logback-classic-1.5.25.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-to-slf4j\2.24.3\da1143e2a2531ee1c2d90baa98eb50a28a39d5a7\log4j-to-slf4j-2.24.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\2.0.17\524cb6ccc2b68a57604750e1ab8b13b5a786a6aa\jul-to-slf4j-2.0.17.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.17\d9e58ac9c7779ba3bf8142aff6c830617a7fe60f\slf4j-api-2.0.17.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.9.25.1\a713c790da4d794c7dfb542b550d4e44898d5e23\aspectjweaver-1.9.25.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-configuration-processor\3.5.10\50a1ef1319953d93b0965517983c44e146ca067b\spring-boot-configuration-processor-3.5.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.jmolecules\jmolecules-events\1.10.0\a6b1870764bf56a00d2c0ba710b87f303029bea\jmolecules-events-1.10.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jcl\6.2.15\4e8c809606ff25d22521e3f5be6b059b7fa10c91\spring-jcl-6.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.5.25\137f4ae0af7acaa0f9600a2ca18ddc9f3a0b899b\logback-core-1.5.25.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\crist\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.24.3\b02c125db8b6d295adf72ae6e71af5d83bce2370\log4j-api-2.24.3.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\crist\OneDrive\Escritorio\Testing\src\main\resources</SrcDir>
+    <SrcDir>C:\Users\crist\OneDrive\Escritorio\Testing\src\main\java</SrcDir>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="3d55d0b1d8baa8d2fb467b2350a0945" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>mx.edu.cetys.software_quality_lab.petstore.Adoption.getPet() may expose internal representation by returning Adoption.pet</LongMessage>
+    <Class classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="26" end="53" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>At Adoption.java:[lines 26-53]</Message>
+      </SourceLine>
+      <Message>In class mx.edu.cetys.software_quality_lab.petstore.Adoption</Message>
+    </Class>
+    <Method classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="getPet" signature="()Lmx/edu/cetys/software_quality_lab/pets/Pet;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="46" end="46" startBytecode="0" endBytecode="46" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java"/>
+      <Message>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.getPet()</Message>
+    </Method>
+    <Field classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="pet" signature="Lmx/edu/cetys/software_quality_lab/pets/Pet;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>In Adoption.java</Message>
+      </SourceLine>
+      <Message>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.pet</Message>
+    </Field>
+    <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" start="46" end="46" startBytecode="4" endBytecode="4" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+      <Message>At Adoption.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="891a2888c494bd95193a5545a75abcaa" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>mx.edu.cetys.software_quality_lab.petstore.Adoption.getUser() may expose internal representation by returning Adoption.user</LongMessage>
+    <Class classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="26" end="53" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>At Adoption.java:[lines 26-53]</Message>
+      </SourceLine>
+      <Message>In class mx.edu.cetys.software_quality_lab.petstore.Adoption</Message>
+    </Class>
+    <Method classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="getUser" signature="()Lmx/edu/cetys/software_quality_lab/users/User;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="43" end="43" startBytecode="0" endBytecode="46" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java"/>
+      <Message>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.getUser()</Message>
+    </Method>
+    <Field classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="user" signature="Lmx/edu/cetys/software_quality_lab/users/User;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>In Adoption.java</Message>
+      </SourceLine>
+      <Message>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.user</Message>
+    </Field>
+    <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" start="43" end="43" startBytecode="4" endBytecode="4" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+      <Message>At Adoption.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="a5e59432a740b239f1a58352b4ceffde" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet) may expose internal representation by storing an externally mutable object into Adoption.pet</LongMessage>
+    <Class classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="26" end="53" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>At Adoption.java:[lines 26-53]</Message>
+      </SourceLine>
+      <Message>In class mx.edu.cetys.software_quality_lab.petstore.Adoption</Message>
+    </Class>
+    <Method classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="&lt;init&gt;" signature="(Lmx/edu/cetys/software_quality_lab/users/User;Lmx/edu/cetys/software_quality_lab/pets/Pet;)V" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="33" end="38" startBytecode="0" endBytecode="121" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java"/>
+      <Message>In method new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet)</Message>
+    </Method>
+    <Field classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="pet" signature="Lmx/edu/cetys/software_quality_lab/pets/Pet;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>In Adoption.java</Message>
+      </SourceLine>
+      <Message>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.pet</Message>
+    </Field>
+    <LocalVariable name="pet" register="2" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named pet</Message>
+    </LocalVariable>
+    <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" start="35" end="35" startBytecode="18" endBytecode="18" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+      <Message>At Adoption.java:[line 35]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="cd518c21b6c11e54cc872060d630afc4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet) may expose internal representation by storing an externally mutable object into Adoption.user</LongMessage>
+    <Class classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="26" end="53" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>At Adoption.java:[lines 26-53]</Message>
+      </SourceLine>
+      <Message>In class mx.edu.cetys.software_quality_lab.petstore.Adoption</Message>
+    </Class>
+    <Method classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="&lt;init&gt;" signature="(Lmx/edu/cetys/software_quality_lab/users/User;Lmx/edu/cetys/software_quality_lab/pets/Pet;)V" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="33" end="38" startBytecode="0" endBytecode="121" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java"/>
+      <Message>In method new mx.edu.cetys.software_quality_lab.petstore.Adoption(User, Pet)</Message>
+    </Method>
+    <Field classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="user" signature="Lmx/edu/cetys/software_quality_lab/users/User;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>In Adoption.java</Message>
+      </SourceLine>
+      <Message>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.user</Message>
+    </Field>
+    <LocalVariable name="user" register="1" pc="13" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named user</Message>
+    </LocalVariable>
+    <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" start="34" end="34" startBytecode="13" endBytecode="13" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+      <Message>At Adoption.java:[line 34]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="86d823c2a82d97f8386f4e760e50dd92" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>mx.edu.cetys.software_quality_lab.petstore.Adoption.setPet(Pet) may expose internal representation by storing an externally mutable object into Adoption.pet</LongMessage>
+    <Class classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="26" end="53" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>At Adoption.java:[lines 26-53]</Message>
+      </SourceLine>
+      <Message>In class mx.edu.cetys.software_quality_lab.petstore.Adoption</Message>
+    </Class>
+    <Method classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="setPet" signature="(Lmx/edu/cetys/software_quality_lab/pets/Pet;)V" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="47" end="47" startBytecode="0" endBytecode="57" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java"/>
+      <Message>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.setPet(Pet)</Message>
+    </Method>
+    <Field classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="pet" signature="Lmx/edu/cetys/software_quality_lab/pets/Pet;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>In Adoption.java</Message>
+      </SourceLine>
+      <Message>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.pet</Message>
+    </Field>
+    <LocalVariable name="pet" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named pet</Message>
+    </LocalVariable>
+    <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" start="47" end="47" startBytecode="2" endBytecode="2" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+      <Message>At Adoption.java:[line 47]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="8bad46a722ae044313877a32df648546" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>mx.edu.cetys.software_quality_lab.petstore.Adoption.setUser(User) may expose internal representation by storing an externally mutable object into Adoption.user</LongMessage>
+    <Class classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="26" end="53" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>At Adoption.java:[lines 26-53]</Message>
+      </SourceLine>
+      <Message>In class mx.edu.cetys.software_quality_lab.petstore.Adoption</Message>
+    </Class>
+    <Method classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="setUser" signature="(Lmx/edu/cetys/software_quality_lab/users/User;)V" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" start="44" end="44" startBytecode="0" endBytecode="57" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java"/>
+      <Message>In method mx.edu.cetys.software_quality_lab.petstore.Adoption.setUser(User)</Message>
+    </Method>
+    <Field classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" name="user" signature="Lmx/edu/cetys/software_quality_lab/users/User;" isStatic="false" primary="true" classAnnotationNames="jakarta.persistence.Entity,jakarta.persistence.Table">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+        <Message>In Adoption.java</Message>
+      </SourceLine>
+      <Message>Field mx.edu.cetys.software_quality_lab.petstore.Adoption.user</Message>
+    </Field>
+    <LocalVariable name="user" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named user</Message>
+    </LocalVariable>
+    <SourceLine classname="mx.edu.cetys.software_quality_lab.petstore.Adoption" primary="true" start="44" end="44" startBytecode="2" endBytecode="2" sourcefile="Adoption.java" sourcepath="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\petstore\Adoption.java">
+      <Message>At Adoption.java:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="d66a5977bec5efce6a94fd24910f65f4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field mx.edu.cetys.software_quality_lab.users.UserValidatorService.userRepository from instance method new mx.edu.cetys.software_quality_lab.users.UserValidatorService(EmailValidatorService, UserRepository)</LongMessage>
+    <Class classname="mx.edu.cetys.software_quality_lab.users.UserValidatorService" primary="true" classAnnotationNames="org.springframework.stereotype.Service">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.users.UserValidatorService" start="10" end="102" sourcefile="UserValidatorService.java" sourcepath="mx/edu/cetys/software_quality_lab/users/UserValidatorService.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\users\UserValidatorService.java">
+        <Message>At UserValidatorService.java:[lines 10-102]</Message>
+      </SourceLine>
+      <Message>In class mx.edu.cetys.software_quality_lab.users.UserValidatorService</Message>
+    </Class>
+    <Method classname="mx.edu.cetys.software_quality_lab.users.UserValidatorService" name="&lt;init&gt;" signature="(Lmx/edu/cetys/software_quality_lab/validators/EmailValidatorService;Lmx/edu/cetys/software_quality_lab/users/UserRepository;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Service">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.users.UserValidatorService" start="17" end="19" startBytecode="0" endBytecode="78" sourcefile="UserValidatorService.java" sourcepath="mx/edu/cetys/software_quality_lab/users/UserValidatorService.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\users\UserValidatorService.java"/>
+      <Message>In method new mx.edu.cetys.software_quality_lab.users.UserValidatorService(EmailValidatorService, UserRepository)</Message>
+    </Method>
+    <Field classname="mx.edu.cetys.software_quality_lab.users.UserValidatorService" name="userRepository" signature="Lmx/edu/cetys/software_quality_lab/users/UserRepository;" isStatic="true" primary="true" classAnnotationNames="org.springframework.stereotype.Service">
+      <SourceLine classname="mx.edu.cetys.software_quality_lab.users.UserValidatorService" sourcefile="UserValidatorService.java" sourcepath="mx/edu/cetys/software_quality_lab/users/UserValidatorService.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\users\UserValidatorService.java">
+        <Message>In UserValidatorService.java</Message>
+      </SourceLine>
+      <Message>Field mx.edu.cetys.software_quality_lab.users.UserValidatorService.userRepository</Message>
+    </Field>
+    <SourceLine classname="mx.edu.cetys.software_quality_lab.users.UserValidatorService" primary="true" start="18" end="18" startBytecode="5" endBytecode="5" sourcefile="UserValidatorService.java" sourcepath="mx/edu/cetys/software_quality_lab/users/UserValidatorService.java" relSourcepath="java\mx\edu\cetys\software_quality_lab\users\UserValidatorService.java">
+      <Message>At UserValidatorService.java:[line 18]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 14 May 2026 20:47:01 -0700" total_classes="0" referenced_classes="0" total_bugs="7" total_size="0" num_packages="2" java_version="25.0.2" vm_version="25.0.2+10-69" cpu_seconds="62.69" clock_seconds="25.32" peak_mbytes="389.72" alloc_mbytes="10168.00" gc_seconds="0.05" priority_2="6" priority_1="1">
+    <FileStats path="mx/edu/cetys/software_quality_lab/petstore/Adoption.java" bugCount="6" size="0" bugHash="83dd73a22fe4dff1a9e90077f35d7d8d"/>
+    <FileStats path="mx/edu/cetys/software_quality_lab/users/UserValidatorService.java" bugCount="1" size="0" bugHash="5d9e81944fd8fc7320fd23ece1d431e9"/>
+    <FindBugsProfile></FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
